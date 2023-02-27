@@ -1,0 +1,64 @@
+/* #region CSS RELATED TO GENERAL PAGE LAYOUT */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  /* line-height: 1.42em; */
+  color: #cbc8cf;
+  background-color: #1F2739;
+}
+
+/* #endregion */
+
+.img-container {
+  min-height: 201px;
+  background-image: url(../img/site-header-image-compressed2.jpg);
+  background-repeat: no-repeat;
+  background-size: 3075px 201px;
+  background-position: center top;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.heading {
+  font-size: 52px;
+}
+
+/* .subheading {
+  font-size: 15px;
+} */
+
+.rene-profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin: 20px 0;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+}
+
+.about-me {
+  width: 300px;
+}
+
+.about-me-heading {
+  font-weight: 400;
+  margin-bottom: 3px;
+  font-size: 20px;
+}
