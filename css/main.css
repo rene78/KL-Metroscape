@@ -29,10 +29,18 @@ body {
 .text-container {
   background-color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
+  text-align: center;
 }
 
 .heading {
   font-size: 52px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.subheading {
+  font-weight: 100;
+  font-size: 18px;
 }
 
 .rene-profile {
