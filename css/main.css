@@ -1,16 +1,18 @@
-/* #region CSS RELATED TO GENERAL PAGE LAYOUT */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+:root {
+  --main-color: #cbc8cf;
+  --bg-color: #1F2739;
+}
 
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   /* line-height: 1.42em; */
-  color: #cbc8cf;
-  background-color: #1F2739;
+  color: var(--main-color);
+  background-color: var(--bg-color);
 }
-
-/* #endregion */
 
 .img-container {
   min-height: 201px;
@@ -33,40 +35,34 @@ body {
   font-size: 52px;
 }
 
-/* .subheading {
-  font-size: 15px;
-} */
-
 .rene-profile {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  margin: 20px 0;
+  margin: 30px;
 }
 
 .profile-pic {
   border-radius: 50%;
   width: 125px;
   height: 125px;
-  margin: 15px;
+  margin: 5px 15px;
 }
 
 .about-me {
-  width: 300px;
+  width: 570px;
 }
 
 .about-me-heading {
   font-weight: 400;
-  margin-bottom: 3px;
+  margin: 5px 0;
   font-size: 20px;
 }
 
 .email-symbol {
-  margin-top: 5px;
+  margin: 7px 0 0 0;
   width: 25px;
-  margin-right: 7px;
 }
 
 .email-symbol:hover {
@@ -78,8 +74,93 @@ body {
   color: inherit;
 }
 
+@media (max-width: 800px) {
+  .about-me-heading {
+    text-align: center;
+  }
+
+  .email-symbol {
+    margin: 7px auto;
+  }
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1400px;
+  padding: 0px 30px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .post {
-  width: 300px;
-  height: 200px;
-  background-color: antiquewhite;
+  width: 20%;
+  margin: 25px;
+  border: solid 1px var(--main-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 1340px) {
+  .post {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .post {
+    width: 21%;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .post {
+    width: 45%;
+  }
+}
+
+@media (max-width: 800px) {
+  .post {
+    width: 43%;
+  }
+}
+
+@media (max-width: 600px) {
+  .post {
+    margin: 0px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 510px) {
+  .post {
+    margin-bottom: 20px;
+  }
+}
+
+.post-image {
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.post-heading {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-top: solid 1px #eaeae6;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
