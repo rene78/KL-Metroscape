@@ -1,0 +1,12 @@
+.blog-post-container {
+  margin: 40px auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.date {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--secondary-color);
+  font-weight: 800;
+}

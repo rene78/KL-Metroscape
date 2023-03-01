@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
 :root {
-  --main-color: #cbc8cf;
   --bg-color: #1F2739;
+  --main-color: #cbc8cf;
+  --secondary-color: #66adac;
 }
 
 body {
@@ -14,13 +15,27 @@ body {
   background-color: var(--bg-color);
 }
 
+.gh-corner {
+  position: absolute;
+  right: 0;
+  opacity: 0.7;
+}
+
+/* Don't show GitHub corner on small screens due to overlap with heading */
+@media (max-width: 600px) {
+  .gh-corner {
+    display: none;
+  }
+}
+
 .img-container {
   min-height: 201px;
   background-image: url(../img/site-header-image-compressed2.jpg);
   background-repeat: no-repeat;
   background-size: 3075px 201px;
   background-position: center top;
-
+  text-decoration: none;
+  color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
