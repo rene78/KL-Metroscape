@@ -49,6 +49,16 @@
     <!-- Style related -->
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/posts.css" />
+    <!-- Scripts -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="mrt2.js" defer></script>
+    <script src="article1.js" defer></script>
   </head>
 </head>
 
@@ -70,7 +80,21 @@
   <div class="blog-post-container">
     <h3 class="date">Last updated: March 1, 2023</h3>
     <h3>The Link between Accessibility and Ridership: A Closer Look at MRT Trains in Kuala Lumpur</h3>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi officiis ullam possimus sequi ipsa consequatur nemo enim molestias facilis non atque repellat distinctio, expedita doloremque nesciunt deserunt aliquid! Eum, quas.</p>
+    <label for="stations">Choose a station:</label>
+    <select name="stations" id="stations">
+      <option value="1">Kwasa Damansara</option>
+      <option value="3">Kampung Selamat</option>
+      <option value="4">Sungai Buloh</option>
+      <option value="5">Damansara Damai</option>
+      <option value="6">Sri Damansara Barat</option>
+      <option value="7">Sri Damansara Sentral</option>
+      <option value="8">Sri Damansara Timur</option>
+      <option value="9">Metro Prima</option>
+    </select>
+    <div id="map"></div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi officiis ullam possimus sequi ipsa consequatur
+      nemo enim molestias facilis non atque repellat distinctio, expedita doloremque nesciunt deserunt aliquid! Eum,
+      quas.</p>
   </div>
 </body>
 
