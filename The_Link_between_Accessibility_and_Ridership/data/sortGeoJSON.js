@@ -1,6 +1,9 @@
 /*
 Purpose of this helper script:
-- Sort GeoJSON elements, so that a recommendation feature is always above a reach polygon so that it can be clicked
+- Sort GeoJSON elements, so that a recommendation feature is always above a reach polygon in order for it to remain clickable
+
+Usage
+- Just open sortGeoJSON.html and copy newly sorted GeoJSON. Paste it to putrajayaLineRecommendations.geojson
 */
 
 let inputGeoJSON;

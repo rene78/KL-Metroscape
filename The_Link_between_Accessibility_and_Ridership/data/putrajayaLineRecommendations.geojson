@@ -2500,8 +2500,9 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "[[Kwasa Damansara MRT station|PY01 Kwasa Damansara]]",
+                "title": "PY01 Kwasa Damansara",
                 "type": "station",
+                "comment": "No way to reach neighborhoods to the east.",
                 "sort": 4
             },
             "geometry": {

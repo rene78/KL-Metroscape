@@ -75,8 +75,24 @@ function showGeoJson(inputGeoJson) {
     layer.on('click', function (e) {
       console.log(e);
       console.log(e.target.feature.properties.title);
+
+      const tableHtml = `
+        <h2>${e.target.feature.properties.title}</h2>
+        <p>${e.target.feature.properties.comment}</p>
+      `;
+      let mapContainer = document.querySelector("#map");
+
+      //Popup with tag comparison table
+      L.popup({
+        maxWidth: mapContainer.clientWidth - 45,
+        maxHeight: mapContainer.clientHeight - 40,
+        className: "stylePopup"
+      })
+        .setLatLng(e.latlng)
+        .setContent(tableHtml)
+        .openOn(map);
     });
-  }
+  };
 
   //Style the features
   function style(feature) {
@@ -102,15 +118,14 @@ stationsSelector.addEventListener('change', event => {
   let selectedStationNumber = event.target.value;
   const elementsBelongingToSelectedStation = L.featureGroup();
   leafletPutrajaLineAssessment.eachLayer(function (l) {
-    console.log('selectedStationNumber: ' + selectedStationNumber + ', typeOf: ' + typeof (selectedStationNumber));
-    console.log('l.feature.properties["part-of"]: ' + l.feature.properties["part-of"] + ', typeOf: ' + typeof (l.feature.properties["part-of"]));
+    // console.log('selectedStationNumber: ' + selectedStationNumber + ', typeOf: ' + typeof (selectedStationNumber));
+    // console.log('l.feature.properties["part-of"]: ' + l.feature.properties["part-of"] + ', typeOf: ' + typeof (l.feature.properties["part-of"]));
     if (selectedStationNumber === l.feature.properties["part-of"]) {
       // console.log('found!');
       //Add element to feature group
       l.addTo(elementsBelongingToSelectedStation);
     }
   });
-  console.log(elementsBelongingToSelectedStation);
   //Zoom and pan to featureGroup
   map.fitBounds(elementsBelongingToSelectedStation.getBounds());
 });
