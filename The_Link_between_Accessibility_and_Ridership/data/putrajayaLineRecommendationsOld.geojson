@@ -1978,7 +1978,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY12 Sri Delima",
+                "title": "[[Sri Delima station|PY12 Sri Delima]]",
                 "type": "station",
                 "sort": 4
             },
@@ -1995,7 +1995,7 @@
             "properties": {
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
-                "title": "PY22 Conlay",
+                "title": "[[Conlay station|PY22 Conlay]]",
                 "marker-color": "ffcc00",
                 "type": "station",
                 "sort": 4
@@ -2014,7 +2014,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY27 Kuchai",
+                "title": "[[Kuchai Lama station|PY27 Kuchai]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2030,7 +2030,7 @@
             "type": "Feature",
             "properties": {
                 "marker-symbol": "rail-metro",
-                "title": "PY39 Cyberjaya Utara",
+                "title": "[[Cyberjaya North station|PY39 Cyberjaya Utara]]",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
@@ -2047,7 +2047,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY07 Sri Damansara Sentral",
+                "title": "[[Sri Damansara Sentral MRT station|PY07 Sri Damansara Sentral]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2066,7 +2066,7 @@
             "type": "Feature",
             "properties": {
                 "marker-symbol": "rail-metro",
-                "title": "PY17 Titiwangsa",
+                "title": "[[Titiwangsa station|PY17 Titiwangsa]]",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
@@ -2083,7 +2083,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY19 Raja Uda",
+                "title": "[[Raja Uda MRT station|PY19 Raja Uda]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2101,7 +2101,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY28 Taman Naga Emas",
+                "title": "[[Taman Naga Emas station|PY28 Taman Naga Emas]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2119,7 +2119,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY40 Cyberjaya City Centre",
+                "title": "[[Cyberjaya City Centre MRT station|PY40 Cyberjaya City Centre]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2137,7 +2137,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY08 Sri Damansara Timur",
+                "title": "[[Sri Damansara Timur MRT station|PY08 Sri Damansara Timur]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2155,7 +2155,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY18 Hospital Kuala Lumpur",
+                "title": "[[Hospital Kuala Lumpur station|PY18 Hospital Kuala Lumpur]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2176,7 +2176,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY20 Ampang Park",
+                "title": "[[Ampang Park LRT station|PY20 Ampang Park]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2194,7 +2194,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY34 Universiti Putra Malaysia (UPM)",
+                "title": "[[UPM station|PY34 Universiti Putra Malaysia (UPM)]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2210,7 +2210,7 @@
             "type": "Feature",
             "properties": {
                 "marker-symbol": "rail-metro",
-                "title": "PY37 Putra Permai",
+                "title": "[[Taman Putra Permai station|PY37 Putra Permai]]",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
@@ -2227,7 +2227,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY15 Jalan Ipoh",
+                "title": "[[Jalan Ipoh station|PY15 Jalan Ipoh]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2246,7 +2246,7 @@
             "type": "Feature",
             "properties": {
                 "marker-symbol": "rail-metro",
-                "title": "PY25 Bandar Malaysia Utara",
+                "title": "[[Bandar Malaysia Utara MRT station|PY25 Bandar Malaysia Utara]]",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
@@ -2263,7 +2263,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY36 Taman Equine",
+                "title": "[[Equine Park station|PY36 Taman Equine]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2282,7 +2282,7 @@
             "type": "Feature",
             "properties": {
                 "marker-symbol": "rail-metro",
-                "title": "PY38 16 Sierra",
+                "title": "[[16 Sierra station|PY38 16 Sierra]]",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
@@ -2302,7 +2302,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY16 Sentul Barat",
+                "title": "[[Sentul Barat MRT station|PY16 Sentul Barat]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2320,7 +2320,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY26 Bandar Malaysia Selatan",
+                "title": "[[Bandar Malaysia Selatan MRT station|PY26 Bandar Malaysia Selatan]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2338,7 +2338,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY32 Serdang Raya Selatan",
+                "title": "[[Serdang Raya South station|PY32 Serdang Raya Selatan]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2353,7 +2353,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY05 Damansara Damai",
+                "title": "[[Damansara Damai station|PY05 Damansara Damai]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2374,7 +2374,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY23 Tun Razak Exchange",
+                "title": "[[Tun Razak Exchange MRT station|PY23 Tun Razak Exchange]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2392,7 +2392,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY33 Serdang Jaya",
+                "title": "[[Seri Kembangan station|PY33 Serdang Jaya]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2410,7 +2410,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY06 Sri Damansara Barat",
+                "title": "[[Sri Damansara Barat MRT station|PY06 Sri Damansara Barat]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2426,7 +2426,7 @@
             "type": "Feature",
             "properties": {
                 "marker-symbol": "rail-metro",
-                "title": "PY24 Chan Sow Lin",
+                "title": "[[Chan Sow Lin station|PY24 Chan Sow Lin]]",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
@@ -2443,7 +2443,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY41 Putrajaya Sentral",
+                "title": "[[Putrajaya Sentral, Putrajaya|PY41 Putrajaya Sentral]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2462,7 +2462,7 @@
             "type": "Feature",
             "properties": {
                 "marker-symbol": "rail-metro",
-                "title": "PY03 Kampung Selamat",
+                "title": "[[Kampung Selamat MRT station|PY03 Kampung Selamat]]",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
@@ -2482,7 +2482,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY13 Kampung Batu",
+                "title": "[[Kampung Batu station|PY13 Kampung Batu]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2503,7 +2503,6 @@
                 "title": "PY01 Kwasa Damansara",
                 "stars": 1,
                 "type": "station",
-                "part-of": "1",
                 "comment": "No way to reach neighborhoods to the east.",
                 "sort": 4
             },
@@ -2518,7 +2517,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY04 Sungai Buloh",
+                "title": "[[Sungai Buloh railway station|PY04 Sungai Buloh]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2537,7 +2536,7 @@
             "type": "Feature",
             "properties": {
                 "marker-symbol": "rail-metro",
-                "title": "PY14 Kentonmen",
+                "title": "[[Kentonmen station|PY14 Kentonmen]]",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
@@ -2554,7 +2553,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY29 Sungai Besi",
+                "title": "[[Sungai Besi station|PY29 Sungai Besi]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2572,7 +2571,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY09 Metro Prima",
+                "title": "[[Metro Prima MRT station|PY09 Metro Prima]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2590,7 +2589,7 @@
         {
             "type": "Feature",
             "properties": {
-                "title": "PY11 Jinjang",
+                "title": "[[Jinjang station|PY11 Jinjang]]",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
@@ -2611,7 +2610,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY21 Persiaran KLCC",
+                "title": "[[KLCC East station|PY21 Persiaran KLCC]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2629,7 +2628,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY31 Serdang Raya Utara",
+                "title": "[[Serdang Raya North station|PY31 Serdang Raya Utara]]",
                 "type": "station",
                 "sort": 4
             },
@@ -2647,7 +2646,7 @@
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
-                "title": "PY10 Kepong Baru",
+                "title": "[[Kepong Baru station|PY10 Kepong Baru]]",
                 "type": "station",
                 "sort": 4
             },

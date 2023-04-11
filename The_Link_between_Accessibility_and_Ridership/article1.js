@@ -1,3 +1,45 @@
+//All station names and numbers
+const stations = {
+  1: 'PY01 Kwasa Damansara',
+  3: 'PY03 Kampung Selamat',
+  4: 'PY04 Sungai Buloh',
+  5: 'PY05 Damansara Damai',
+  6: 'PY06 Sri Damansara Barat',
+  7: 'PY07 Sri Damansara Sentral',
+  8: 'PY08 Sri Damansara Timur',
+  9: 'PY09 Metro Prima',
+  10: 'PY10 Kepong Baru',
+  11: 'PY11 Jinjang',
+  12: 'PY12 Sri Delima',
+  13: 'PY13 Kampung Batu',
+  14: 'PY14 Kentonmen',
+  15: 'PY15 Jalan Ipoh',
+  16: 'PY16 Sentul Barat',
+  17: 'PY17 Titiwangsa',
+  18: 'PY18 Hospital Kuala Lumpur',
+  19: 'PY19 Raja Uda',
+  20: 'PY20 Ampang Park',
+  21: 'PY21 Persiaran KLCC',
+  22: 'PY22 Conlay',
+  23: 'PY23 Tun Razak Exchange',
+  24: 'PY24 Chan Sow Lin',
+  25: 'PY25 Bandar Malaysia Utara',
+  26: 'PY26 Bandar Malaysia Selatan',
+  27: 'PY27 Kuchai',
+  28: 'PY28 Taman Naga Emas',
+  29: 'PY29 Sungai Besi',
+  31: 'PY31 Serdang Raya Utara',
+  32: 'PY32 Serdang Raya Selatan',
+  33: 'PY33 Serdang Jaya',
+  34: 'PY34 Universiti Putra Malaysia (UPM)',
+  36: 'PY36 Taman Equine',
+  37: 'PY37 Putra Permai',
+  38: 'PY38 16 Sierra',
+  39: 'PY39 Cyberjaya Utara',
+  40: 'PY40 Cyberjaya City Centre',
+  41: 'PY41 Putrajaya Sentral'
+};
+
 //Leaflet map
 let map;
 let leafletPutrajaLineAssessment;
@@ -70,28 +112,29 @@ function showGeoJson(inputGeoJson) {
         layer.setStyle({ weight: 5 });
       });
     }
-
     //Open info table on click
     layer.on('click', function (e) {
+      const leafletPopup = generatePopupHtml(e.target);
+      leafletPopup
+        .setLatLng(e.latlng)
+        .openOn(map);
+      /*
       console.log(e);
       console.log(e.target.feature.properties.title);
-
-      const tableHtml = `
-        <h2>${e.target.feature.properties.title}</h2>
-        <p>${e.target.feature.properties.comment}</p>
-      `;
-      let mapContainer = document.querySelector("#map");
-
-      //Popup with tag comparison table
+      const mapContainer = document.querySelector("#map");
+ 
+      //Popup with station infos
       L.popup({
         maxWidth: mapContainer.clientWidth - 45,
         maxHeight: mapContainer.clientHeight - 40,
         className: "stylePopup"
       })
         .setLatLng(e.latlng)
-        .setContent(tableHtml)
+        .setContent(popupHtml)
         .openOn(map);
-    });
+        */
+    }
+    );
   };
 
   //Style the features
@@ -112,6 +155,61 @@ function showGeoJson(inputGeoJson) {
   }
 }
 
+//Generate and return Leaflet Popup element
+function generatePopupHtml(element) {
+  //Render popup for "station", "recommendation", "reach" and "line" separately
+  const type = element.feature.properties.type
+  let popupHtml;
+
+  //Type "station"
+  if (type === "station") {
+    popupHtml = `
+      <h3 class="popup-heading">${element.feature.properties.title}</h3>
+      <div class="stars">
+        <div class="star activated"></div>
+        <div class="star ${element.feature.properties.stars > 1 ? "activated" : ""} "></div>
+        <div class="star ${element.feature.properties.stars > 2 ? "activated" : ""} "></div>
+      </div>
+      <div>${element.feature.properties.comment}</div>
+    `;
+  }
+  else if (type === "recommendation") {
+    popupHtml = `
+      <h3 class="popup-heading">${stations[parseInt(element.feature.properties["part-of"])]}</h3>
+      <div>${element.feature.properties.comment}</div>
+      `;
+  }
+  else if (type === "reachPolygons") {
+    popupHtml = `
+      <h3 class="popup-heading">${stations[parseInt(element.feature.properties["part-of"])]}</h3>
+      <ul>
+        <li>This area can be reached on foot within ${(element.feature.properties.label).trim()} from the station</li>
+        <li>Population (estimated): ${element.feature.properties.total_pop}</li>
+        <li>Surface area: ${element.feature.properties.area}</li>
+      </ul>
+      `;
+  }
+  else if (type === "mrtline") {
+    popupHtml = `
+        <h3 class="popup-heading">MRT Putrajaya Line</h3>
+      `;
+  }
+  // return popupHtml;
+  //Open info table on click
+
+  const mapContainer = document.querySelector("#map");
+  console.log(element);
+
+  //Popup with station infos
+  const leafletPopup = L.popup({
+    maxWidth: mapContainer.clientWidth - 45,
+    maxHeight: mapContainer.clientHeight - 40,
+    className: "stylePopup"
+  })
+    .setContent(popupHtml)
+  return leafletPopup;
+}
+
 //If station has been selected in the dropdown list --> Zoom to associated map elements
 let stationsSelector = document.getElementById('stations');
 stationsSelector.addEventListener('change', event => {
@@ -124,8 +222,18 @@ stationsSelector.addEventListener('change', event => {
       // console.log('found!');
       //Add element to feature group
       l.addTo(elementsBelongingToSelectedStation);
+
+      //open station pop-up if correct station element is found
+      if (l.feature.properties.type === "station") {
+        console.log(l.feature);
+        const leafletPopup = generatePopupHtml(l);
+        leafletPopup
+          .setLatLng(l.getLatLng())
+          .openOn(map);
+      }
     }
   });
   //Zoom and pan to featureGroup
   map.fitBounds(elementsBelongingToSelectedStation.getBounds());
+
 });

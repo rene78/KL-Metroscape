@@ -49,6 +49,16 @@ function addSortValue() {
       else if (reach === "900") inputGeoJSON.features[i].properties.sort = 0;
     }
     else console.log('There is some bug. This should not be executed');
+
+    //Furthermore update the name, e.g. change it from [[Raja Uda MRT station|PY19 Raja Uda]]"
+    //to "PY19 Raja Uda"
+    const title = inputGeoJSON.features[i].properties.title;
+    if (title) {
+      const locationOfVerticalBar = title.indexOf("|");
+      if (locationOfVerticalBar === -1) continue;//Only update title if there is a "|" in it.
+      const updatedTitle = title.slice(locationOfVerticalBar + 1, -2);
+      inputGeoJSON.features[i].properties.title = updatedTitle;
+    }
   }
   //console.log(exampleGeoJSON);
 }

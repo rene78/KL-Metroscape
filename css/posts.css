@@ -15,3 +15,26 @@
   height: 400px;
   width: 400px;
 }
+
+.popup-heading {
+  text-align: center;
+  margin: 0;
+}
+
+.star:before {
+  content: '★ ';
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 23px;
+  justify-content: center;
+  color: #ccc;
+}
+
+.activated {
+  color: #ffc700;
+}
