@@ -10,7 +10,7 @@ let inputGeoJSON;
 getGeoJSON();
 
 async function getGeoJSON() {
-  const response = await fetch("putrajayaLineRecommendations.geojson");
+  const response = await fetch("putrajayaLineRecommendationsTest.geojson");
   inputGeoJSON = await response.json();
 
   addSortValue();
@@ -44,9 +44,9 @@ function addSortValue() {
     else if (type === "recommendation") inputGeoJSON.features[i].properties.sort = 3;
     else if (type === "reachPolygons") {
       const reach = inputGeoJSON.features[i].properties.value
-      if (reach === "300") inputGeoJSON.features[i].properties.sort = 2;
-      else if (reach === "600") inputGeoJSON.features[i].properties.sort = 1;
-      else if (reach === "900") inputGeoJSON.features[i].properties.sort = 0;
+      if (reach == "300") inputGeoJSON.features[i].properties.sort = 2;
+      else if (reach == "600") inputGeoJSON.features[i].properties.sort = 1;
+      else if (reach == "900") inputGeoJSON.features[i].properties.sort = 0;
     }
     else console.log('There is some bug. This should not be executed');
 

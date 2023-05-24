@@ -46,6 +46,18 @@ let leafletPutrajaLineAssessment;
 
 loadGeoJsonAndDisplayMap();
 
+//Fill in all select options
+populateSelect();
+function populateSelect() {
+  let optionsHtml = '<option hidden disabled selected> Select a station </option>';
+
+  for (const stationNumber in stations) {
+    const stationName = stations[stationNumber];
+    optionsHtml += `<option value="${stationNumber}">${stationName}</option>`;
+  }
+  document.querySelector("#stations").innerHTML = optionsHtml;
+}
+
 //Load the Putrajaya Line GeoJSON. Once this is done instantiate the Leaflet map and load the GeoJSON into the map
 async function loadGeoJsonAndDisplayMap() {
   const response = await fetch("./data/putrajayaLineRecommendations.geojson");
@@ -144,9 +156,9 @@ function showGeoJson(inputGeoJson) {
     else if (feature.properties.type === "mrtline") return { "color": "#ffcc00", "weight": 5 };
     else if (feature.properties.type === "reachPolygons") {
       // console.log(feature.properties.value);
-      if (feature.properties.value === "300") return { "fillColor": "green", "fillOpacity": 0.5, "weight": 0 };
-      else if (feature.properties.value === "600") return { "fillColor": "orange", "fillOpacity": 0.5, "weight": 0 };
-      else if (feature.properties.value === "900") return { "fillColor": "red", "fillOpacity": 0.5, "weight": 0 };
+      if (feature.properties.value == "300") return { "fillColor": "green", "fillOpacity": 0.5, "weight": 0 };
+      else if (feature.properties.value == "600") return { "fillColor": "orange", "fillOpacity": 0.5, "weight": 0 };
+      else if (feature.properties.value == "900") return { "fillColor": "red", "fillOpacity": 0.5, "weight": 0 };
     }
 
     let style = { "color": "blue", "weight": 5 };
@@ -218,7 +230,7 @@ stationsSelector.addEventListener('change', event => {
   leafletPutrajaLineAssessment.eachLayer(function (l) {
     // console.log('selectedStationNumber: ' + selectedStationNumber + ', typeOf: ' + typeof (selectedStationNumber));
     // console.log('l.feature.properties["part-of"]: ' + l.feature.properties["part-of"] + ', typeOf: ' + typeof (l.feature.properties["part-of"]));
-    if (selectedStationNumber === l.feature.properties["part-of"]) {
+    if (selectedStationNumber == l.feature.properties["part-of"]) {
       // console.log('found!');
       //Add element to feature group
       l.addTo(elementsBelongingToSelectedStation);
