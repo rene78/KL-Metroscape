@@ -1,4 +1,4 @@
-//All station names and numbers & empty object 'features' for Leaflet layer groups.
+//All station names and numbers & empty object 'features' for Leaflet feature groups.
 //'Features' will be populated with reach polygons and recommendations for each station number later.
 const stations = {
   1: { name: 'PY01 Kwasa Damansara', features: undefined },
@@ -65,18 +65,18 @@ async function loadGeoJsonAndDisplayMap() {
   const geoJson = await response.json();
   //Add the base map without any layers.
   addLeafletMap();
-  //Create empty layer groups in 'stations' object
-  createEmptyLayerGroups();
+  //Create empty feature groups in 'stations' object
+  createEmptyFeatureGroups();
   //Load the GeoJSON into the map
   showGeoJson(geoJson);
   //Hide all reachPolygons and recommendations. Only show them when station is selected
   hideReachPolygonsAndRecommendations();
 }
 
-//Create empty layer groups in 'stations' object
-function createEmptyLayerGroups() {
+//Create empty feature groups in 'stations' object
+function createEmptyFeatureGroups() {
   for (const stationNumber in stations) {
-    stations[stationNumber].features = L.layerGroup().addTo(map);
+    stations[stationNumber].features = L.featureGroup().addTo(map);
   }
 }
 
@@ -119,12 +119,12 @@ function showGeoJson(inputGeoJson) {
 
   //Define what happens when hovering over each polygon/way/marker
   function onEachFeature(feature, layer) {
-    console.log(feature);
+    // console.log(feature);
     // console.log(layer);
 
     //Add reach polygons and recommendations to respective layer group in 'stations'
     if (feature.properties.type === "recommendation" || feature.properties.type === "reachPolygons") {
-      console.log('called!');
+      // console.log('called!');
       stations[feature.properties["part-of"]].features.addLayer(layer);
     }
 
@@ -233,7 +233,8 @@ function hideReachPolygonsAndRecommendations() {
   }
 }
 
-//If station has been selected in the dropdown list --> Zoom to associated map elements
+//If station has been selected in the dropdown list
+// --> Show reachPolygons and recommendations for this station and zoom to associated map elements
 let stationsSelector = document.getElementById('stations');
 stationsSelector.addEventListener('change', event => {
   let selectedStationNumber = event.target.value;
@@ -258,12 +259,11 @@ stationsSelector.addEventListener('change', event => {
   });
   //Zoom and pan to featureGroup
   map.fitBounds(elementsBelongingToSelectedStation.getBounds());
-
 });
 
 /*Proceed with:
 When a station is selected on drop down or on the map:
-- Remove all reachPolygons and recommendations
+- Create a function that removes all reachPolygons and recommendations
 - Display reachPolygons and recommendations for selected station
 - If it works --> Remove the 2 GeoJSONS and the temp below
 */
