@@ -1,44 +1,46 @@
-//All station names and numbers & empty object 'features' for Leaflet feature groups.
-//'Features' will be populated with reach polygons and recommendations for each station number later.
+//Station numbers, names and Leaflet features.
+//'features' is a Leaflet layer group and will be populated with reach polygons and recommendations for each station number later.
+//stationNode is the single Leaflet layer with the station node (needed to create the pop-up when the station is selected from the dropdown menu)
+//"features" and "stationNode" are populated during "onEachFeature" function call. 
 const stations = {
-  1: { name: 'PY01 Kwasa Damansara', features: undefined },
-  3: { name: 'PY03 Kampung Selamat', features: undefined },
-  4: { name: 'PY04 Sungai Buloh', features: undefined },
-  5: { name: 'PY05 Damansara Damai', features: undefined },
-  6: { name: 'PY06 Sri Damansara Barat', features: undefined },
-  7: { name: 'PY07 Sri Damansara Sentral', features: undefined },
-  8: { name: 'PY08 Sri Damansara Timur', features: undefined },
-  9: { name: 'PY09 Metro Prima', features: undefined },
-  10: { name: 'PY10 Kepong Baru', features: undefined },
-  11: { name: 'PY11 Jinjang', features: undefined },
-  12: { name: 'PY12 Sri Delima', features: undefined },
-  13: { name: 'PY13 Kampung Batu', features: undefined },
-  14: { name: 'PY14 Kentonmen', features: undefined },
-  15: { name: 'PY15 Jalan Ipoh', features: undefined },
-  16: { name: 'PY16 Sentul Barat', features: undefined },
-  17: { name: 'PY17 Titiwangsa', features: undefined },
-  18: { name: 'PY18 Hospital Kuala Lumpur', features: undefined },
-  19: { name: 'PY19 Raja Uda', features: undefined },
-  20: { name: 'PY20 Ampang Park', features: undefined },
-  21: { name: 'PY21 Persiaran KLCC', features: undefined },
-  22: { name: 'PY22 Conlay', features: undefined },
-  23: { name: 'PY23 Tun Razak Exchange', features: undefined },
-  24: { name: 'PY24 Chan Sow Lin', features: undefined },
-  25: { name: 'PY25 Bandar Malaysia Utara', features: undefined },
-  26: { name: 'PY26 Bandar Malaysia Selatan', features: undefined },
-  27: { name: 'PY27 Kuchai', features: undefined },
-  28: { name: 'PY28 Taman Naga Emas', features: undefined },
-  29: { name: 'PY29 Sungai Besi', features: undefined },
-  31: { name: 'PY31 Serdang Raya Utara', features: undefined },
-  32: { name: 'PY32 Serdang Raya Selatan', features: undefined },
-  33: { name: 'PY33 Serdang Jaya', features: undefined },
-  34: { name: 'PY34 Universiti Putra Malaysia (UPM)', features: undefined },
-  36: { name: 'PY36 Taman Equine', features: undefined },
-  37: { name: 'PY37 Putra Permai', features: undefined },
-  38: { name: 'PY38 16 Sierra', features: undefined },
-  39: { name: 'PY39 Cyberjaya Utara', features: undefined },
-  40: { name: 'PY40 Cyberjaya City Centre', features: undefined },
-  41: { name: 'PY41 Putrajaya Sentral', features: undefined }
+  1: { name: 'PY01 Kwasa Damansara', features: undefined, stationNode: undefined },
+  3: { name: 'PY03 Kampung Selamat' },
+  4: { name: 'PY04 Sungai Buloh' },
+  5: { name: 'PY05 Damansara Damai' },
+  6: { name: 'PY06 Sri Damansara Barat' },
+  7: { name: 'PY07 Sri Damansara Sentral' },
+  8: { name: 'PY08 Sri Damansara Timur' },
+  9: { name: 'PY09 Metro Prima' },
+  10: { name: 'PY10 Kepong Baru' },
+  11: { name: 'PY11 Jinjang' },
+  12: { name: 'PY12 Sri Delima' },
+  13: { name: 'PY13 Kampung Batu' },
+  14: { name: 'PY14 Kentonmen' },
+  15: { name: 'PY15 Jalan Ipoh' },
+  16: { name: 'PY16 Sentul Barat' },
+  17: { name: 'PY17 Titiwangsa' },
+  18: { name: 'PY18 Hospital Kuala Lumpur' },
+  19: { name: 'PY19 Raja Uda' },
+  20: { name: 'PY20 Ampang Park' },
+  21: { name: 'PY21 Persiaran KLCC' },
+  22: { name: 'PY22 Conlay' },
+  23: { name: 'PY23 Tun Razak Exchange' },
+  24: { name: 'PY24 Chan Sow Lin' },
+  25: { name: 'PY25 Bandar Malaysia Utara' },
+  26: { name: 'PY26 Bandar Malaysia Selatan' },
+  27: { name: 'PY27 Kuchai' },
+  28: { name: 'PY28 Taman Naga Emas' },
+  29: { name: 'PY29 Sungai Besi' },
+  31: { name: 'PY31 Serdang Raya Utara' },
+  32: { name: 'PY32 Serdang Raya Selatan' },
+  33: { name: 'PY33 Serdang Jaya' },
+  34: { name: 'PY34 Universiti Putra Malaysia (UPM)' },
+  36: { name: 'PY36 Taman Equine' },
+  37: { name: 'PY37 Putra Permai' },
+  38: { name: 'PY38 16 Sierra' },
+  39: { name: 'PY39 Cyberjaya Utara' },
+  40: { name: 'PY40 Cyberjaya City Centre' },
+  41: { name: 'PY41 Putrajaya Sentral' }
 };
 
 //Leaflet map
@@ -61,7 +63,7 @@ function populateSelect() {
 
 //Load the Putrajaya Line GeoJSON. Once this is done instantiate the Leaflet map and load the GeoJSON into the map
 async function loadGeoJsonAndDisplayMap() {
-  const response = await fetch("./data/putrajayaLineRecommendations_alles.geojson");
+  const response = await fetch("./data/putrajayaLineRecommendations.geojson");
   const geoJson = await response.json();
   //Add the base map without any layers.
   addLeafletMap();
@@ -99,8 +101,6 @@ function showGeoJson(inputGeoJson) {
   const trainIcon = L.icon({
     iconUrl: './data/metro.png',
     iconSize: [20, 50], // size of the icon
-    //iconAnchor: [-10, 0], // point of the icon which will correspond to marker's location
-    //popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
   });
 
   leafletPutrajaLineAssessment = L.geoJSON(inputGeoJson, {
@@ -122,10 +122,16 @@ function showGeoJson(inputGeoJson) {
     // console.log(feature);
     // console.log(layer);
 
-    //Add reach polygons and recommendations to respective layer group in 'stations'
+    //Add reach polygons and recommendations to respective feature group in 'stations'
     if (feature.properties.type === "recommendation" || feature.properties.type === "reachPolygons") {
       // console.log('called!');
       stations[feature.properties["part-of"]].features.addLayer(layer);
+    }
+
+    //Add station node layer to station.stationNode
+    if (feature.properties.type === "station") {
+      // console.log('called!');
+      stations[feature.properties["part-of"]].stationNode = layer;
     }
 
     //Increase line weight on focus for recommendation features
@@ -140,16 +146,19 @@ function showGeoJson(inputGeoJson) {
         layer.setStyle({ weight: 5 });
       });
     }
-    //Open info table on click
+    //Open info table on click. If station is selected show appropriate reachPolygons and recommendations.
     layer.on('click', function (e) {
+      /*
+      console.log(e);
+      console.log(e.target.feature.properties['part-of']);
+      */
       const leafletPopup = generatePopupHtml(e.target);
       leafletPopup
         .setLatLng(e.latlng)
         .openOn(map);
-      /*
-      console.log(e);
-      console.log(e.target.feature.properties.title);
-      */
+      /*If a station has been clicked:
+      Forward station number to function that shows appropriate reachPolygons and recommendations*/
+      if (feature.properties.type === "station") showreachPolygonsAndRecommendationsAndZoom(e.target.feature.properties['part-of']);
     });
   };
 
@@ -210,13 +219,9 @@ function generatePopupHtml(element) {
         <h3 class="popup-heading">MRT Putrajaya Line</h3>
       `;
   }
-  // return popupHtml;
-  //Open info table on click
-
-  const mapContainer = document.querySelector("#map");
-  console.log(element);
 
   //Popup with station infos
+  const mapContainer = document.querySelector("#map");
   const leafletPopup = L.popup({
     maxWidth: mapContainer.clientWidth - 45,
     maxHeight: mapContainer.clientHeight - 40,
@@ -233,83 +238,29 @@ function hideReachPolygonsAndRecommendations() {
   }
 }
 
-//If station has been selected in the dropdown list
-// --> Show reachPolygons and recommendations for this station and zoom to associated map elements
+/*If station has been selected in the dropdown list:
+- Show reachPolygons and recommendations for this station
+- zoom to associated map elements
+- Open station pop-up*/
 let stationsSelector = document.getElementById('stations');
 stationsSelector.addEventListener('change', event => {
   let selectedStationNumber = event.target.value;
-  const elementsBelongingToSelectedStation = L.featureGroup();
-  leafletPutrajaLineAssessment.eachLayer(function (l) {
-    // console.log('selectedStationNumber: ' + selectedStationNumber + ', typeOf: ' + typeof (selectedStationNumber));
-    // console.log('l.feature.properties["part-of"]: ' + l.feature.properties["part-of"] + ', typeOf: ' + typeof (l.feature.properties["part-of"]));
-    if (selectedStationNumber == l.feature.properties["part-of"]) {
-      // console.log('found!');
-      //Add element to feature group
-      l.addTo(elementsBelongingToSelectedStation);
+  showreachPolygonsAndRecommendationsAndZoom(selectedStationNumber);
 
-      //open station pop-up if correct station element is found
-      if (l.feature.properties.type === "station") {
-        console.log(l.feature);
-        const leafletPopup = generatePopupHtml(l);
-        leafletPopup
-          .setLatLng(l.getLatLng())
-          .openOn(map);
-      }
-    }
-  });
-  //Zoom and pan to featureGroup
-  map.fitBounds(elementsBelongingToSelectedStation.getBounds());
+  //open station pop-up
+  const stationNode = stations[selectedStationNumber].stationNode//Leaflet layer of station node
+  const leafletPopup = generatePopupHtml(stationNode);
+  leafletPopup
+    .setLatLng(stationNode.getLatLng())
+    .openOn(map);
 });
 
-/*Proceed with:
-When a station is selected on drop down or on the map:
-- Create a function that removes all reachPolygons and recommendations
-- Display reachPolygons and recommendations for selected station
-- If it works --> Remove the 2 GeoJSONS and the temp below
-*/
-
-
-//Temp: Load GeoJSON recommendations of station 1
-let stationPutrajaLineAssessmentLayer;
-
-const wrapper = document.getElementById('wrapper');
-
-wrapper.addEventListener('click', async event => {
-  const isButton = event.target.nodeName === 'BUTTON';
-  if (!isButton) {
-    return;
-  }
-
-  let stationNumber = event.target.value;
-  console.log(stationNumber);
-  let stationGeoJsonToRender = {
-    "type": "FeatureCollection",
-    "features": []
-  };
-
-  //Remove old recommendations from map
-  if (stationPutrajaLineAssessmentLayer) map.removeLayer(stationPutrajaLineAssessmentLayer);
-
-  //Load GeoJSON with recommendations for Putrajaya Line
-  const response = await fetch("./data/putrajayaLineRecommendations.geojson");
-  const putrajayaLineRecommendations = await response.json();
-  for (let i = 0; i < putrajayaLineRecommendations.features.length; i++) {
-    if (putrajayaLineRecommendations.features[i].properties["part-of"] == stationNumber) {
-      stationGeoJsonToRender.features.push(putrajayaLineRecommendations.features[i])
-    }
-  }
-  // console.log(stationGeoJsonToRender);
-
-  //Add filtered GeoJSON to map
-  stationPutrajaLineAssessmentLayer = L.geoJSON(stationGeoJsonToRender,
-    // {
-    //   onEachFeature: onEachFeature,
-    //   style: style,
-    //   pointToLayer(feature, latlng) {
-    //     return L.marker(latlng, { icon: trainIcon });
-    //   }
-    // }
-  )
-  //Add GeoJSON to map
-  stationPutrajaLineAssessmentLayer.addTo(map);
-})
+function showreachPolygonsAndRecommendationsAndZoom(stationNumber) {
+  // console.log(`station number: ${stationNumber}`);
+  //1. Remove all old reachPolygons and recommendations from previous selections
+  hideReachPolygonsAndRecommendations();
+  //2. Show featureGroup with appropriate reachPolygons and recommendations
+  map.addLayer(stations[stationNumber].features);
+  //3. Zoom to elements of featureGroup
+  map.fitBounds(stations[stationNumber].features.getBounds());
+}
