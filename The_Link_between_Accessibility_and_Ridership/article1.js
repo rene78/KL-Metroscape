@@ -47,10 +47,13 @@ const stations = {
 let map;
 let leafletPutrajaLineAssessment;
 
+//Fill in all select options
+populateSelect();
+
+//Load GeoJSON and display map
 loadGeoJsonAndDisplayMap();
 
 //Fill in all select options
-populateSelect();
 function populateSelect() {
   let optionsHtml = '<option hidden disabled selected> Select a station </option>';
 
@@ -86,15 +89,26 @@ function createEmptyFeatureGroups() {
 function addLeafletMap() {
   const defaultOsmTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     // maxZoom: 13,
-    minZoom: 10
+    minZoom: 10,
   });
 
   map = L.map('map', {
     //center: [3.19, 101.60], //defined by "fitBounds"
     //zoom: 12, //defined by "fitBounds"
-    layers: defaultOsmTiles
+    layers: defaultOsmTiles,
+    zoomControl: false, //Needed in order to separate zoom control buttons and full screen button
+
+    fullscreenControl: true,
+    fullscreenControlOptions: {
+      position: 'topright'
+    }
   });
+  //Code below needed in order to separate zoom control buttons and full screen button
+  L.control.zoom({
+    position: 'topleft'
+  }).addTo(map);
 }
+
 
 //Show GeoJSON features on the Leaflet map & add functions to determine what happens on mouseover
 function showGeoJson(inputGeoJson) {
