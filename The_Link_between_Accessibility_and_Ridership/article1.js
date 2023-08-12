@@ -46,7 +46,6 @@ const stations = {
 
 //Leaflet map
 let map;
-let leafletPutrajaLineAssessment;
 
 //Fill in all select options
 populateSelect();
@@ -118,7 +117,7 @@ function showGeoJson(inputGeoJson) {
     iconSize: [20, 50], // size of the icon
   });
 
-  leafletPutrajaLineAssessment = L.geoJSON(inputGeoJson, {
+  const leafletPutrajaLineAssessment = L.geoJSON(inputGeoJson, {
     onEachFeature: onEachFeature,
     style: style,
     pointToLayer(feature, latlng) {
@@ -287,12 +286,12 @@ stationsSelector.addEventListener('change', event => {
     .openOn(map);
 });
 
-/*
+/*Show station analysis on map and zoom to it:
 1. Show reach polygons
 2. Show recommmendations
 3. Show station node and station popup
 4. Create layer control elements (tickbox on map)
-5. zoom to elements
+5. Zoom to elements
 */
 let layerControl;
 function showreachPolygonsAndRecommendationsAndZoom(stationNumber) {
