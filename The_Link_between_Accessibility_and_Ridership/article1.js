@@ -1,9 +1,10 @@
 //Station numbers, names and Leaflet features.
-//'features' is a Leaflet layer group and will be populated with reach polygons and recommendations for each station number later.
-//stationNode is the single Leaflet layer with the station node (needed to create the pop-up when the station is selected from the dropdown menu)
-//"features" and "stationNode" are populated during "onEachFeature" function call. 
+//'reachPolygonFeatures' is a Leaflet layer group and will be populated with reach polygons each station number later.
+//'recommendationFeatures' is a Leaflet layer group and will be populated with recommendations for each station number later.
+//stationNodeFeature is the single Leaflet layer with the station node (needed to create the pop-up when the station is selected from the dropdown menu)
+//"reachPolygonFeatures", "recommendationFeatures" and "stationNodeFeature" are populated during "onEachFeature" function call. 
 const stations = {
-  1: { name: 'PY01 Kwasa Damansara', features: undefined, stationNode: undefined },
+  1: { name: 'PY01 Kwasa Damansara', reachPolygonFeatures: undefined, recommendationFeatures: undefined, stationNodeFeature: undefined },
   3: { name: 'PY03 Kampung Selamat' },
   4: { name: 'PY04 Sungai Buloh' },
   5: { name: 'PY05 Damansara Damai' },
@@ -81,7 +82,8 @@ async function loadGeoJsonAndDisplayMap() {
 //Create empty feature groups in 'stations' object
 function createEmptyFeatureGroups() {
   for (const stationNumber in stations) {
-    stations[stationNumber].features = L.featureGroup().addTo(map);
+    stations[stationNumber].reachPolygonFeatures = L.featureGroup().addTo(map);
+    stations[stationNumber].recommendationFeatures = L.featureGroup().addTo(map);
   }
 }
 
@@ -108,7 +110,6 @@ function addLeafletMap() {
     position: 'topleft'
   }).addTo(map);
 }
-
 
 //Show GeoJSON features on the Leaflet map & add functions to determine what happens on mouseover
 function showGeoJson(inputGeoJson) {
@@ -137,19 +138,16 @@ function showGeoJson(inputGeoJson) {
     // console.log(layer);
 
     //Add reach polygons and recommendations to respective feature group in 'stations'
-    if (feature.properties.type === "recommendation" || feature.properties.type === "reachPolygons") {
+    if (feature.properties.type === "reachPolygons") {
       // console.log('called!');
-      stations[feature.properties["part-of"]].features.addLayer(layer);
+      stations[feature.properties["part-of"]].reachPolygonFeatures.addLayer(layer);
     }
 
-    //Add station node layer to station.stationNode
-    if (feature.properties.type === "station") {
+    //Add recommendations to respective feature group in 'stations'
+    else if (feature.properties.type === "recommendation") {
       // console.log('called!');
-      stations[feature.properties["part-of"]].stationNode = layer;
-    }
-
-    //Increase line weight on focus for recommendation features
-    if (feature.properties.type === "recommendation") {
+      //Add to feature group
+      stations[feature.properties["part-of"]].recommendationFeatures.addLayer(layer);
       //Increase line weight when feature gets focus
       layer.on('mouseover', function (e) {
         layer.setStyle({ weight: 8 });
@@ -160,6 +158,25 @@ function showGeoJson(inputGeoJson) {
         layer.setStyle({ weight: 5 });
       });
     }
+
+    //Add station node layer to station.stationNodeFeature
+    else if (feature.properties.type === "station") {
+      // console.log('called!');
+      stations[feature.properties["part-of"]].stationNodeFeature = layer;
+    }
+
+    //Increase line weight on focus for recommendation features
+    // if (feature.properties.type === "recommendation") {
+    //   //Increase line weight when feature gets focus
+    //   layer.on('mouseover', function (e) {
+    //     layer.setStyle({ weight: 8 });
+    //   });
+
+    //   //Change line weight back when feature loses focus
+    //   layer.on('mouseout', function (e) {
+    //     layer.setStyle({ weight: 5 });
+    //   });
+    // }
     //Open info table on click. If station is selected show appropriate reachPolygons and recommendations.
     layer.on('click', function (e) {
       /*
@@ -248,7 +265,8 @@ function generatePopupHtml(element) {
 //Hide all reachPolygons and recommendations
 function hideReachPolygonsAndRecommendations() {
   for (const stationNumber in stations) {
-    map.removeLayer(stations[stationNumber].features);
+    map.removeLayer(stations[stationNumber].reachPolygonFeatures);
+    map.removeLayer(stations[stationNumber].recommendationFeatures);
   }
 }
 
@@ -262,19 +280,46 @@ stationsSelector.addEventListener('change', event => {
   showreachPolygonsAndRecommendationsAndZoom(selectedStationNumber);
 
   //open station pop-up
-  const stationNode = stations[selectedStationNumber].stationNode//Leaflet layer of station node
-  const leafletPopup = generatePopupHtml(stationNode);
+  const stationNodeFeature = stations[selectedStationNumber].stationNodeFeature//Leaflet layer of station node
+  const leafletPopup = generatePopupHtml(stationNodeFeature);
   leafletPopup
-    .setLatLng(stationNode.getLatLng())
+    .setLatLng(stationNodeFeature.getLatLng())
     .openOn(map);
 });
 
+/*
+1. Show reach polygons
+2. Show recommmendations
+3. Show station node and station popup
+4. Create layer control elements (tickbox on map)
+5. zoom to elements
+*/
+let layerControl;
 function showreachPolygonsAndRecommendationsAndZoom(stationNumber) {
   // console.log(`station number: ${stationNumber}`);
+
   //1. Remove all old reachPolygons and recommendations from previous selections
   hideReachPolygonsAndRecommendations();
   //2. Show featureGroup with appropriate reachPolygons and recommendations
-  map.addLayer(stations[stationNumber].features);
-  //3. Zoom to elements of featureGroup
-  map.fitBounds(stations[stationNumber].features.getBounds());
+  map.addLayer(stations[stationNumber].reachPolygonFeatures);
+  map.addLayer(stations[stationNumber].recommendationFeatures);
+
+  //3. Add reachPolygons and recommendations on a layer Control in order to show and hide it with tickbox
+  const reachPolygonsAndRecommendations = {
+    "Reach Analysis": stations[stationNumber].reachPolygonFeatures,
+    "Recommendations": stations[stationNumber].recommendationFeatures
+  };
+
+  //On second and subsequent station selections first remove old layer control element on top right of map
+  //Else an additional one would be added.
+  if (layerControl != undefined) {
+    layerControl.remove(map);
+  }
+  layerControl = L.control.layers(undefined, reachPolygonsAndRecommendations, { collapsed: false }).addTo(map);
+
+  //4. Zoom to elements of featureGroups "reachPolygonFeatures" and "recommendationFeatures"
+  //Create a temporary featureGroup in order to getBounds from all elements
+  const tempFeatureGroup = L.featureGroup([stations[stationNumber].reachPolygonFeatures, stations[stationNumber].recommendationFeatures]);
+  //Zoom to those elements
+  map.fitBounds(tempFeatureGroup.getBounds());
 }
