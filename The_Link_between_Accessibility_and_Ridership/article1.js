@@ -44,6 +44,9 @@ const stations = {
   41: { name: 'PY41 Putrajaya Sentral' }
 };
 
+//The "stations" select element
+let stationsSelector = document.getElementById('stations');
+
 //Leaflet map
 let map;
 
@@ -158,24 +161,12 @@ function showGeoJson(inputGeoJson) {
       });
     }
 
-    //Add station node layer to station.stationNodeFeature
+    //Add station node layer to station.stationNodeFeature (Note: No featureGroup here)
     else if (feature.properties.type === "station") {
       // console.log('called!');
       stations[feature.properties["part-of"]].stationNodeFeature = layer;
     }
 
-    //Increase line weight on focus for recommendation features
-    // if (feature.properties.type === "recommendation") {
-    //   //Increase line weight when feature gets focus
-    //   layer.on('mouseover', function (e) {
-    //     layer.setStyle({ weight: 8 });
-    //   });
-
-    //   //Change line weight back when feature loses focus
-    //   layer.on('mouseout', function (e) {
-    //     layer.setStyle({ weight: 5 });
-    //   });
-    // }
     //Open info table on click. If station is selected show appropriate reachPolygons and recommendations.
     layer.on('click', function (e) {
       /*
@@ -187,8 +178,13 @@ function showGeoJson(inputGeoJson) {
         .setLatLng(e.latlng)
         .openOn(map);
       /*If a station has been clicked:
-      Forward station number to function that shows appropriate reachPolygons and recommendations*/
-      if (feature.properties.type === "station") showreachPolygonsAndRecommendationsAndZoom(e.target.feature.properties['part-of']);
+      1. Forward station number to function that shows appropriate reachPolygons and recommendations
+      2. Update entry in dropdown list to station that has been selected on the map*/
+      if (feature.properties.type === "station") {
+        const selectedStationNumberOnMap = e.target.feature.properties['part-of'];
+        showreachPolygonsAndRecommendationsAndZoom(selectedStationNumberOnMap);
+        stationsSelector.value = selectedStationNumberOnMap;
+      }
     });
   };
 
@@ -273,13 +269,12 @@ function hideReachPolygonsAndRecommendations() {
 - Show reachPolygons and recommendations for this station
 - zoom to associated map elements
 - Open station pop-up*/
-let stationsSelector = document.getElementById('stations');
 stationsSelector.addEventListener('change', event => {
-  let selectedStationNumber = event.target.value;
-  showreachPolygonsAndRecommendationsAndZoom(selectedStationNumber);
+  const selectedStationNumberOnDropdown = event.target.value;
+  showreachPolygonsAndRecommendationsAndZoom(selectedStationNumberOnDropdown);
 
   //open station pop-up
-  const stationNodeFeature = stations[selectedStationNumber].stationNodeFeature//Leaflet layer of station node
+  const stationNodeFeature = stations[selectedStationNumberOnDropdown].stationNodeFeature//Leaflet layer of station node
   const leafletPopup = generatePopupHtml(stationNodeFeature);
   leafletPopup
     .setLatLng(stationNodeFeature.getLatLng())
@@ -289,8 +284,8 @@ stationsSelector.addEventListener('change', event => {
 /*Show station analysis on map and zoom to it:
 1. Show reach polygons
 2. Show recommmendations
-3. Show station node and station popup
-4. Create layer control elements (tickbox on map)
+3. Show station station popup
+4. Create layer control elements (i.e. tickboxes to show/hide reach polygons and recommendations on map)
 5. Zoom to elements
 */
 let layerControl;
@@ -314,7 +309,7 @@ function showreachPolygonsAndRecommendationsAndZoom(stationNumber) {
   if (layerControl != undefined) {
     layerControl.remove(map);
   }
-  layerControl = L.control.layers(undefined, reachPolygonsAndRecommendations, { collapsed: false }).addTo(map);
+  layerControl = L.control.layers(undefined, reachPolygonsAndRecommendations).addTo(map);
 
   //4. Zoom to elements of featureGroups "reachPolygonFeatures" and "recommendationFeatures"
   //Create a temporary featureGroup in order to getBounds from all elements
