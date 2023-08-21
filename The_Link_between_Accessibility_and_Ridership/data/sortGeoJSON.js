@@ -55,7 +55,7 @@ function addSortValue() {
     const title = inputGeoJSON.features[i].properties.title;
     if (title) {
       const locationOfVerticalBar = title.indexOf("|");
-      if (locationOfVerticalBar === -1) continue;//Only update title if there is a "|" in it.
+      if (locationOfVerticalBar === -1) continue;//Skip this title if there is no "|" in it.
       const updatedTitle = title.slice(locationOfVerticalBar + 1, -2);
       inputGeoJSON.features[i].properties.title = updatedTitle;
     }

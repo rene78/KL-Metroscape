@@ -105,7 +105,14 @@ function addLeafletMap() {
     fullscreenControl: true,
     fullscreenControlOptions: {
       position: 'topright'
-    }
+    },
+    contextmenu: true,
+    contextmenuWidth: 150,
+    contextmenuItems: [{
+      text: 'Open with GMaps',
+      icon: 'data/gmaps-logo.png',
+      callback: openGmaps
+    }]
   });
   //Code below needed in order to separate zoom control buttons and full screen button
   L.control.zoom({
@@ -263,6 +270,18 @@ function hideReachPolygonsAndRecommendations() {
     map.removeLayer(stations[stationNumber].reachPolygonFeatures);
     map.removeLayer(stations[stationNumber].recommendationFeatures);
   }
+}
+
+//Open link to OSM when "RMB --> Open with..."
+function openOSM(e) {
+  const url = `https://www.openstreetmap.org/?mlat=${e.latlng.lat}&mlon=${e.latlng.lng}#map=${map.getZoom()}/${e.latlng.lat}/${e.latlng.lng}`;
+  window.open(url, '_blank').focus();
+}
+
+//Open link to Google Maps when "RMB --> Open with..."
+function openGmaps(e) {
+  const url = `https://maps.google.com/maps?q=loc:${e.latlng.lat},${e.latlng.lng}`;
+  window.open(url, '_blank').focus();
 }
 
 /*If station has been selected in the dropdown list:
