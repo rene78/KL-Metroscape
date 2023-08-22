@@ -12382,6 +12382,56 @@
       "type": "Feature",
       "properties": {
         "stroke-opacity": "1",
+        "comment": "Add a footpath/cycleway to connect industrial area to station.",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "part-of": "11",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.65506076861,
+            3.21061942267
+          ],
+          [
+            101.65500389409,
+            3.2104180051
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Gated community has to be made accessible for pedestrians and cyclists who want to reach the station.",
+        "stroke-opacity": "1",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "part-of": "9",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.64133728028,
+            3.21982033216
+          ],
+          [
+            101.64151368975,
+            3.22006476756
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke-opacity": "1",
         "comment": "Give soldiers of Kem Sungai Buloh a chance to reach the station on foot as well.",
         "part-of": "4",
         "stroke-width": "10",
@@ -12426,7 +12476,7 @@
     {
       "type": "Feature",
       "properties": {
-        "comment": "Add a bridge for pedestrians/cyclists to connect neighborhoods to MRT station",
+        "comment": "Add a bridge for pedestrians/cyclists to connect neighborhoods to MRT station. Gated community to the south has to be made accessible for pedestrians and cyclists who want to reach the bridge.",
         "stroke-opacity": "1",
         "stroke-width": "10",
         "stroke": "#669c35",
@@ -12481,7 +12531,65 @@
       "type": "Feature",
       "properties": {
         "stroke-opacity": "1",
-        "comment": "Add a footpath/cycleway to connect neighborhoods",
+        "part-of": "12",
+        "comment": "Add a pedestrian/bicycle bridge to connect at least 10,000 residents of Taman Wahyu to the MRT station. Huge potential!",
+        "stroke-width": "10",
+        "sort": 3,
+        "type": "recommendation",
+        "stroke": "#669c35"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.66630029142,
+            3.20707747901
+          ],
+          [
+            101.6666221565,
+            3.20743633206
+          ],
+          [
+            101.66643976629,
+            3.20852895848
+          ],
+          [
+            101.66718542039,
+            3.20896279512
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Have a gate at this side of the apartment complex so residents can reach the MRT station more quickly.",
+        "stroke-opacity": "1",
+        "part-of": "5",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.58629296215,
+            3.19645587635
+          ],
+          [
+            101.58629774897,
+            3.19674624818
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke-opacity": "1",
+        "comment": "Add a footpath/cycleway to connect industrial area to station.",
         "stroke-width": "10",
         "stroke": "#669c35",
         "part-of": "8",
@@ -12580,6 +12688,31 @@
     {
       "type": "Feature",
       "properties": {
+        "comment": "Add a bridge for pedestrians/cyclists to shorten the trip to MRT station.",
+        "stroke-opacity": "1",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "part-of": "10",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.64740980149,
+            3.20512617824
+          ],
+          [
+            101.64750574469,
+            3.20540810934
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "stroke-opacity": "1",
         "stroke-width": "10",
         "stroke": "#669c35",
@@ -12638,7 +12771,32 @@
     {
       "type": "Feature",
       "properties": {
-        "comment": "Add a bridge for pedestrians/cyclists to connect neighborhoods to MRT station",
+        "comment": "Add rear entrance to the mall so that pedestrians can reach the station directly.",
+        "stroke-opacity": "1",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "part-of": "9",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.63873553754,
+            3.21251746854
+          ],
+          [
+            101.63880465865,
+            3.21266549792
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Add a bridge/tunnel for pedestrians/cyclists to connect neighborhoods to MRT station. Gated community to the south has to be made accessible for pedestrians and cyclists who want to reach the bridge/tunnel.",
         "stroke-opacity": "1",
         "stroke-width": "10",
         "stroke": "#669c35",
@@ -12708,6 +12866,35 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke-opacity": "1",
+        "part-of": "11",
+        "comment": "Add a footpath/cycleway to connect industrial area to station.",
+        "stroke-width": "10",
+        "sort": 3,
+        "type": "recommendation",
+        "stroke": "#669c35"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.65581553906,
+            3.20683377755
+          ],
+          [
+            101.65500282973,
+            3.20663828288
+          ],
+          [
+            101.6549625966,
+            3.20651509444
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "comment": "Add a bridge for pedestrians/cyclists to connect northern neighborhoods to MRT station.",
         "stroke-opacity": "1",
         "part-of": "5",
@@ -12726,6 +12913,31 @@
           [
             101.59271753374,
             3.20145157267
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Gated community has to be made accessible for pedestrians and cyclists who want to reach the station.",
+        "stroke-opacity": "1",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "part-of": "9",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.64050579012,
+            3.21870897734
+          ],
+          [
+            101.64073584377,
+            3.21901768445
           ]
         ]
       }
@@ -12820,7 +13032,7 @@
     {
       "type": "Feature",
       "properties": {
-        "comment": "Add a bridge for pedestrians/cyclists to connect neighborhoods to MRT station",
+        "comment": "Add a bridge for pedestrians/cyclists to connect neighborhoods to MRT station. Gated community to the northeast has to be made accessible for pedestrians and cyclists who want to reach the bridge.",
         "stroke-opacity": "1",
         "stroke-width": "10",
         "stroke": "#669c35",
@@ -12882,8 +13094,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            101.6075701504,
-            3.19928213572
+            101.60759160807,
+            3.1991776926
           ],
           [
             101.60750102275,
@@ -12949,6 +13161,31 @@
     {
       "type": "Feature",
       "properties": {
+        "comment": "Have a gate at this side of the apartment complex so residents can reach the MRT station more quickly.",
+        "stroke-opacity": "1",
+        "part-of": "5",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.58864258261,
+            3.19654692422
+          ],
+          [
+            101.58864736943,
+            3.19672481855
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "stroke-opacity": "1",
         "part-of": "5",
         "stroke-width": "10",
@@ -12967,6 +13204,31 @@
           [
             101.59479684221,
             3.19845908861
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke-opacity": "1",
+        "comment": "Add a footpath/cycleway to connect neighorhoods north of the station.",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "part-of": "11",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.65633213836,
+            3.21049087603
+          ],
+          [
+            101.65618406874,
+            3.21020911844
           ]
         ]
       }
@@ -13006,8 +13268,8 @@
         "type": "station",
         "title": "PY07 Sri Damansara Sentral",
         "sort": 4,
-        "stars": "x",
-        "comment": "x"
+        "stars": "1",
+        "comment": "Only accessible for people to the north of the station. Bridge or tunnel is needed for residents to the south."
       },
       "geometry": {
         "type": "Point",
@@ -13090,14 +13352,14 @@
         "title": "PY11 Jinjang",
         "type": "station",
         "sort": 4,
-        "stars": "x",
-        "comment": "x"
+        "stars": "3",
+        "comment": "Station easily accessible from all directions for pedestrians and cyclists. Just some minor improvements could make it even better."
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          101.65586,
-          3.20964
+          101.65580903803,
+          3.20952216792
         ]
       }
     },
@@ -13132,8 +13394,8 @@
         "marker-color": "ffcc00",
         "type": "station",
         "sort": 4,
-        "stars": "x",
-        "comment": "x"
+        "stars": "2",
+        "comment": "Station has potential. With some budget-friendly footways and pedestrian bridges and the removal of access restrictions to the gated community for commuters, it can become a useful MRT station."
       },
       "geometry": {
         "type": "Point",
@@ -13174,14 +13436,14 @@
         "marker-color": "ffcc00",
         "type": "station",
         "sort": 4,
-        "stars": "x",
-        "comment": "x"
+        "stars": "3",
+        "comment": "Station easily accessible from all directions for pedestrians and cyclists. Just some minor improvements could make it even better."
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          101.63916,
-          3.21443
+          101.64038845173,
+          3.2145264076
         ]
       }
     },
@@ -13195,8 +13457,8 @@
         "type": "station",
         "part-of": "10",
         "sort": 4,
-        "stars": "x",
-        "comment": "x"
+        "stars": "3",
+        "comment": "Station easily accessible from all directions for pedestrians and cyclists. Just some minor improvements could make it even better."
       },
       "geometry": {
         "type": "Point",
@@ -13258,8 +13520,8 @@
         "marker-color": "ffcc00",
         "type": "station",
         "sort": 4,
-        "stars": "x",
-        "comment": "x"
+        "stars": "2",
+        "comment": "Station with decent accessibility. Some budget-friendly footways/bridges to the north of the station lets the workers of the Tago industrial zone reach their workplace on foot from the MRT station."
       },
       "geometry": {
         "type": "Point",
@@ -13699,8 +13961,8 @@
         "marker-color": "ffcc00",
         "type": "station",
         "sort": 4,
-        "stars": "x",
-        "comment": "x"
+        "stars": "2",
+        "comment": "Good accessibility to the south and northwest. However, there is great potential for improvement to the northeast of the station! At least 10,000 citizens of Taman Wahyu could be connected to the MRT station by building a simple pedestrian bridge."
       },
       "geometry": {
         "type": "Point",

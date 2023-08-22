@@ -10,7 +10,7 @@ let inputGeoJSON;
 getGeoJSON();
 
 async function getGeoJSON() {
-  const response = await fetch("putrajayaLineRecommendationsTest.geojson");
+  const response = await fetch("putrajayaLineRecommendationsTemp.geojson");
   inputGeoJSON = await response.json();
 
   addSortValue();
