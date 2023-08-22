@@ -118,6 +118,8 @@ function addLeafletMap() {
   L.control.zoom({
     position: 'topleft'
   }).addTo(map);
+  //Add scale to map
+  L.control.scale().addTo(map);
 }
 
 //Show GeoJSON features on the Leaflet map & add functions to determine what happens on mouseover
