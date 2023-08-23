@@ -91,12 +91,12 @@
             "type": "Feature",
             "properties": {
                 "part-of": "14",
-                "stars": "x",
+                "stars": "2",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Station has decent accessibity from all directions for pedestrians and cyclists.",
                 "title": "PY14 Kentonmen",
                 "sort": "4"
             },
@@ -697,6 +697,55 @@
                     [
                         101.62969164480,
                         3.20780377534
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "part-of": "15",
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "comment": "This footway should be inviting to walk on. Install lights and CCTV so even women are okay to walk here in the dark. This could be part of a bicycle superhighway along the river all the way to downtown KL in the future.",
+                "type": "recommendation",
+                "sort": "3"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.67970597208,
+                        3.18424988204
+                    ],
+                    [
+                        101.67955576837,
+                        3.18444270291
+                    ],
+                    [
+                        101.67992054880,
+                        3.18744213400
+                    ],
+                    [
+                        101.67992591321,
+                        3.18783982577
+                    ],
+                    [
+                        101.67994737089,
+                        3.18872626276
+                    ],
+                    [
+                        101.67991518438,
+                        3.18886686070
+                    ],
+                    [
+                        101.68000637949,
+                        3.18945603282
+                    ],
+                    [
+                        101.68019949853,
+                        3.18959529164
                     ]
                 ]
             }
@@ -1544,6 +1593,31 @@
         {
             "type": "Feature",
             "properties": {
+                "stroke-opacity": "1",
+                "comment": "Make this road accessible to the public. Private streets in gated communities shall not be permitted if they impede the movement of the public.",
+                "part-of": "16",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.68282269895,
+                        3.17576037192
+                    ],
+                    [
+                        101.68213068902,
+                        3.17517119196
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "part-of": "33",
                 "area": "0.28 km²",
                 "value": "300",
@@ -1657,6 +1731,31 @@
         {
             "type": "Feature",
             "properties": {
+                "part-of": "15",
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "comment": "It would be nice if people could reach Sentul park from the MRT station",
+                "type": "recommendation",
+                "sort": "3"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.68539224982,
+                        3.18596786650
+                    ],
+                    [
+                        101.68365149618,
+                        3.18932883059
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "part-of": "34",
                 "value": "300",
                 "area": "0.24 km²",
@@ -1722,6 +1821,31 @@
                             101.70227400000,
                             3.00932000000
                         ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "part-of": "15",
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "comment": "Build a pedestrian/bicycle bridge over the river to connect residential area to the MRT station. The residents of \"The ERA\" would only have to walk/cycle 1 km to the station.",
+                "type": "recommendation",
+                "sort": "3"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.67984008252,
+                        3.18367811439
+                    ],
+                    [
+                        101.67923926771,
+                        3.18352010829
                     ]
                 ]
             }
@@ -2506,6 +2630,63 @@
                             101.65856700000,
                             2.94577600000
                         ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "comment": "River footway with bridge over railway line. This could be part of a bicycle superhighway along the river all the way to downtown KL in the future.",
+                "part-of": "16",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.68502211034,
+                        3.17659057946
+                    ],
+                    [
+                        101.68606280744,
+                        3.17605496177
+                    ],
+                    [
+                        101.68618082464,
+                        3.17587285169
+                    ],
+                    [
+                        101.68622910440,
+                        3.17564253595
+                    ],
+                    [
+                        101.68588041723,
+                        3.17397676249
+                    ],
+                    [
+                        101.68585359514,
+                        3.17359111680
+                    ],
+                    [
+                        101.68603598535,
+                        3.17303942897
+                    ],
+                    [
+                        101.68659388483,
+                        3.17200032682
+                    ],
+                    [
+                        101.68677895188,
+                        3.17158790475
+                    ],
+                    [
+                        101.68681113839,
+                        3.17127724502
                     ]
                 ]
             }
@@ -4678,14 +4859,14 @@
         {
             "type": "Feature",
             "properties": {
-                "stars": "x",
+                "stars": "2",
                 "part-of": "15",
                 "title": "PY15 Jalan Ipoh",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Definitely room for improvements. One or two footbridges over Sungai Batu would already improve the situation tremendously.",
                 "sort": "4"
             },
             "geometry": {
@@ -4916,6 +5097,31 @@
                             101.65223600000,
                             2.97883900000
                         ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "part-of": "13",
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "comment": "Add a footpath/cycleway.",
+                "type": "recommendation",
+                "sort": "3"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.67638539731,
+                        3.20567286269
+                    ],
+                    [
+                        101.67609571874,
+                        3.20572374492
                     ]
                 ]
             }
@@ -6727,20 +6933,20 @@
             "type": "Feature",
             "properties": {
                 "part-of": "13",
-                "stars": "x",
+                "stars": "2",
                 "marker-symbol": "rail-metro",
                 "title": "PY13 Kampung Batu",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Station has decent accessibity from all directions for pedestrians and cyclists. Some minor improvements could make it better.",
                 "sort": "4"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    101.67562000000,
-                    3.20524000000
+                    101.67514793121,
+                    3.20598984340
                 ]
             }
         },
@@ -9882,12 +10088,12 @@
             "type": "Feature",
             "properties": {
                 "part-of": "16",
-                "stars": "x",
+                "stars": "2",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Pretty good accessibility to this station. Bukit Tunku could be connected via a bridge or tunnel. A river walkway would allow dweller of Duta Park Residences to walk to the station.",
                 "title": "PY16 Sentul Barat",
                 "sort": "4"
             },
@@ -11711,6 +11917,31 @@
         {
             "type": "Feature",
             "properties": {
+                "part-of": "13",
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "comment": "Install a proper pedestrian crossing.",
+                "type": "recommendation",
+                "sort": "3"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.67595356166,
+                        3.20586567954
+                    ],
+                    [
+                        101.67578190029,
+                        3.20579337323
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "value": "600",
                 "total_pop": "7624",
                 "part-of": "23",
@@ -11899,6 +12130,31 @@
         {
             "type": "Feature",
             "properties": {
+                "part-of": "14",
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "comment": "Open gate to Bamboo Hills so people can walk there from the MRT station. Good for business as well.",
+                "type": "recommendation",
+                "sort": "3"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.67510330140,
+                        3.19456173071
+                    ],
+                    [
+                        101.67510866583,
+                        3.19443050670
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "value": "600",
                 "total_pop": "7746",
                 "part-of": "16",
@@ -12041,6 +12297,31 @@
                     [
                         101.63880465865,
                         3.21266549792
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "part-of": "13",
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "comment": "Add a north entrance to Permai Ria Condominium and make it accessible to commuters. Private streets in gated communities shall not be permitted if they impede the movement of the public.",
+                "type": "recommendation",
+                "sort": "3"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.67619764268,
+                        3.20687528937
+                    ],
+                    [
+                        101.67563974321,
+                        3.20641199374
                     ]
                 ]
             }
@@ -13506,6 +13787,35 @@
         {
             "type": "Feature",
             "properties": {
+                "stroke-opacity": "1",
+                "comment": "Give residents of Bukit Tunku the possibility to use the MRT as well. A pedestrian bridge or underpass is needed.",
+                "part-of": "16",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.68213068902,
+                        3.17517119196
+                    ],
+                    [
+                        101.68154596746,
+                        3.17467306684
+                    ],
+                    [
+                        101.68173908651,
+                        3.17428742141
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "area": "2.98 km²",
                 "total_pop": "18954",
                 "part-of": "18",
@@ -14410,6 +14720,31 @@
                     [
                         101.67078190000,
                         2.92759790000
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "part-of": "15",
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "comment": "Build a pedestrian/bicycle bridge over the river to connect industrial area to the MRT station.",
+                "type": "recommendation",
+                "sort": "3"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.67992859542,
+                        3.18776216207
+                    ],
+                    [
+                        101.67952089966,
+                        3.18783446965
                     ]
                 ]
             }
