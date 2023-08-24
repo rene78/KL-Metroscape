@@ -3917,21 +3917,21 @@
         {
             "type": "Feature",
             "properties": {
-                "stars": "x",
+                "stars": "3",
                 "part-of": "17",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "title": "PY17 Titiwangsa",
                 "type": "station",
-                "comment": "x",
+                "comment": "Station easily accessible from all directions for pedestrians.",
                 "sort": "4"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    101.69578000000,
-                    3.17437000000
+                    101.69599457672,
+                    3.17445034280
                 ]
             }
         },
@@ -5718,14 +5718,14 @@
         {
             "type": "Feature",
             "properties": {
-                "stars": "x",
+                "stars": "3",
                 "marker-symbol": "rail-metro",
                 "title": "PY19 Raja Uda",
                 "part-of": "19",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Station easily accessible from all directions for pedestrians.",
                 "sort": "4"
             },
             "geometry": {
@@ -8477,21 +8477,21 @@
         {
             "type": "Feature",
             "properties": {
-                "stars": "x",
+                "stars": "3",
                 "part-of": "18",
                 "title": "PY18 Hospital Kuala Lumpur",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Station easily accessible from all directions for pedestrians.",
                 "sort": "4"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    101.70100000000,
-                    3.17396000000
+                    101.70200314617,
+                    3.17373504003
                 ]
             }
         },
