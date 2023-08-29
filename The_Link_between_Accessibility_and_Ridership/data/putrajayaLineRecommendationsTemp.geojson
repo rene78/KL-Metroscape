@@ -1249,6 +1249,31 @@
         {
             "type": "Feature",
             "properties": {
+                "stroke-opacity": "1",
+                "part-of": "24",
+                "comment": "Add a footpath/cycleway to connect industrial area to the MRT station.",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.71623497933,
+                        3.12771298488
+                    ],
+                    [
+                        101.71702086657,
+                        3.12640601584
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "comment": "Have a gate at this side of the apartment complex so residents can reach the MRT station more quickly.",
                 "stroke-opacity": "1",
                 "part-of": "5",
@@ -2556,6 +2581,31 @@
             "type": "Feature",
             "properties": {
                 "stroke-opacity": "1",
+                "part-of": "23",
+                "comment": "Covered pedestrian/cycling path to give residents living east of the MRT station safe access without getting killed by cars. A park instead of a golf course would be better here anyway.",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.72136335492,
+                        3.14151507566
+                    ],
+                    [
+                        101.72670363307,
+                        3.13954125642
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
                 "stroke-width": "10",
                 "stroke": "#669c35",
                 "comment": "Add rear entrance to the mall so that pedestrians can reach the station directly.",
@@ -3836,14 +3886,14 @@
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Bandar Malaysia should be developed with a \"pedestrian/bicycle-first\" approach. Residents should be able to easily access the MRT station. Don't forget dwellers who live east of the highway!",
                 "sort": "4"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    101.69891000000,
-                    3.10991000000
+                    101.69772446362,
+                    3.10881726979
                 ]
             }
         },
@@ -4379,7 +4429,7 @@
             "properties": {
                 "stroke-opacity": "1",
                 "part-of": "22",
-                "comment": "Construct bridge for residents of Taman U Thant",
+                "comment": "Construct bridge for residents of Taman U Thant. Level crossing would be better though (priority for pedestrians).",
                 "stroke-width": "10",
                 "sort": "3",
                 "type": "recommendation",
@@ -7190,13 +7240,13 @@
             "type": "Feature",
             "properties": {
                 "part-of": "23",
-                "stars": "x",
+                "stars": "2",
                 "title": "PY23 Tun Razak Exchange",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Decent acccessiblity. Massive \"rift roads\" to the south and east prevent better accessiblity though. Pedestrian bridges or - better yet - level crossings are urgently needed.",
                 "sort": "4"
             },
             "geometry": {
@@ -7497,19 +7547,19 @@
             "properties": {
                 "part-of": "24",
                 "title": "PY24 Chan Sow Lin",
-                "stars": "x",
+                "stars": "1",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Limited accessiblity. Many more footways needed!",
                 "sort": "4"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    101.71661000000,
-                    3.12857000000
+                    101.71659122454,
+                    3.12837716876
                 ]
             }
         },
@@ -9780,6 +9830,31 @@
         {
             "type": "Feature",
             "properties": {
+                "stroke-opacity": "1",
+                "part-of": "24",
+                "comment": "Connect road to pedestrian underpass.",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.71189784870,
+                        3.12853787300
+                    ],
+                    [
+                        101.71212112143,
+                        3.12848972604
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "total_pop": "19138",
                 "label": " 15 min ",
                 "landuse": "residential",
@@ -11644,6 +11719,80 @@
         {
             "type": "Feature",
             "properties": {
+                "stroke-opacity": "1",
+                "part-of": "23",
+                "comment": "Construct bridge to access area east of Jalan Tun Razak. Level crossing would be better though (priority for pedestrians).",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.72050773561,
+                        3.14185787707
+                    ],
+                    [
+                        101.72126411855,
+                        3.14154988662
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "part-of": "24",
+                "comment": "Those pedestrian underpasses should be improved so people dare to walk to the MRT station. Currently very dark and scary! Better yet: Install proper sidewalks with traffic lights for pedestrians on street level.",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.71303510398,
+                        3.12875347034
+                    ],
+                    [
+                        101.71272396773,
+                        3.12864634190
+                    ],
+                    [
+                        101.71260058612,
+                        3.12843208498
+                    ],
+                    [
+                        101.71266227424,
+                        3.12800893012
+                    ],
+                    [
+                        101.71201049745,
+                        3.12829282064
+                    ],
+                    [
+                        101.71212112143,
+                        3.12848972604
+                    ],
+                    [
+                        101.71250402391,
+                        3.12917127384
+                    ],
+                    [
+                        101.71303510129,
+                        3.12886060145
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "value": "600",
                 "area": "0.67 km²",
                 "total_pop": "5640",
@@ -12041,14 +12190,14 @@
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Bandar Malaysia should be developed with a \"pedestrian/bicycle-first\" approach. Residents should be able to easily access the MRT station. Don't forget dwellers who live east of Jalan Sungai Besi!",
                 "sort": "4"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    101.70492000000,
-                    3.11845000000
+                    101.70298880951,
+                    3.11594852347
                 ]
             }
         },
@@ -12427,6 +12576,31 @@
             "type": "Feature",
             "properties": {
                 "stroke-opacity": "1",
+                "part-of": "23",
+                "comment": "Rear exit for pedestrian in condos so that residents don't have to walk along appaling Jalan Tun Razak.",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.72065257758,
+                        3.14596351223
+                    ],
+                    [
+                        101.72111659974,
+                        3.14581889121
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
                 "part-of": "13",
                 "stroke-width": "10",
                 "stroke": "#669c35",
@@ -12676,6 +12850,39 @@
                             101.71144600000,
                             3.15044000000
                         ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "part-of": "26",
+                "comment": "Add a foot and cycling bridge to connect residential area east of the highway to the MRT station. Thousands of Razak City Residence dwellers would be able to use the MRT!",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.69803618848,
+                        3.10869883815
+                    ],
+                    [
+                        101.70102617562,
+                        3.10849529557
+                    ],
+                    [
+                        101.70241287768,
+                        3.10748826838
+                    ],
+                    [
+                        101.70271730840,
+                        3.10705974589
                     ]
                 ]
             }
@@ -13008,6 +13215,35 @@
         {
             "type": "Feature",
             "properties": {
+                "stroke-opacity": "1",
+                "part-of": "24",
+                "comment": "Add a footpath/cycleway to connect industrial/residential area to the MRT station.",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.71705170929,
+                        3.12887131430
+                    ],
+                    [
+                        101.71917333663,
+                        3.12909092754
+                    ],
+                    [
+                        101.71993910730,
+                        3.12861420604
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "total_pop": "962",
                 "area": "0.49 km²",
                 "label": " 15 min ",
@@ -13169,6 +13405,35 @@
                             101.65856700000,
                             2.94577600000
                         ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "part-of": "25",
+                "comment": "Add a footpath/cycleway to connect industrial/residential area east of Jalan Sungai Besi to the MRT station.",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.70335098028,
+                        3.11588727422
+                    ],
+                    [
+                        101.70622899055,
+                        3.11406606690
+                    ],
+                    [
+                        101.70701085448,
+                        3.11410891888
                     ]
                 ]
             }
@@ -13369,6 +13634,31 @@
                             101.70360600000,
                             3.16810600000
                         ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "part-of": "23",
+                "comment": "Residents south of Jalan Sultan Ismail should be able to reach the MRT station on foot as well.",
+                "stroke-width": "10",
+                "sort": "3",
+                "type": "recommendation",
+                "stroke": "#669c35"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.71761631429,
+                        3.13937788187
+                    ],
+                    [
+                        101.71779334009,
+                        3.14007420941
                     ]
                 ]
             }
