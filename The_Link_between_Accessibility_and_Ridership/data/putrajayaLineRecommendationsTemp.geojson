@@ -5,14 +5,14 @@
         {
             "type": "Feature",
             "properties": {
-                "stars": "x",
+                "stars": "1",
                 "marker-symbol": "rail-metro",
                 "title": "PY41 Putrajaya Sentral",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
                 "part-of": "41",
-                "comment": "x",
+                "comment": "The MRT station is located right next to massive \"rift roads\" and a monstrous highway interchange. This severely complicates the accessibility of the station from the south and west.",
                 "sort": "4"
             },
             "geometry": {
@@ -2379,6 +2379,31 @@
         {
             "type": "Feature",
             "properties": {
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "type": "recommendation",
+                "comment": "Construct road to improve accessiblity.",
+                "sort": "3",
+                "part-of": "39"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.65775833044,
+                        2.94790780489
+                    ],
+                    [
+                        101.65804088440,
+                        2.94640289939
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "value": "600",
                 "total_pop": "6996",
                 "part-of": "17",
@@ -3361,6 +3386,31 @@
                     [
                         101.72028779447,
                         3.14932260025
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "type": "recommendation",
+                "comment": "Give residents of Skypark the option to directly reach the MRT station on foot or by bicycle. Add a crossing with traffic lights.",
+                "sort": "3",
+                "part-of": "39"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.65544895384,
+                        2.94958999653
+                    ],
+                    [
+                        101.65656835701,
+                        2.94954228297
                     ]
                 ]
             }
@@ -8989,13 +9039,13 @@
             "type": "Feature",
             "properties": {
                 "title": "PY39 Cyberjaya Utara",
-                "stars": "x",
+                "stars": "1",
                 "part-of": "39",
                 "marker-symbol": "rail-metro",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "This subway station makes little sense. So far, only residents and workers of Skypark can use it comfortably. The number of possible new buildings is also limited by \"rift roads\" in all directions, which impede accessibility to the station.",
                 "sort": "4"
             },
             "geometry": {
@@ -9354,21 +9404,21 @@
         {
             "type": "Feature",
             "properties": {
-                "stars": "x",
+                "stars": "1",
                 "marker-symbol": "rail-metro",
                 "title": "PY40 Cyberjaya City Centre",
                 "marker-size": "small",
                 "marker-color": "ffcc00",
                 "type": "station",
-                "comment": "x",
+                "comment": "Very little development around station as of 2023, thus pretty useless. This might change in the future.",
                 "part-of": "40",
                 "sort": "4"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    101.66587000000,
-                    2.93923000000
+                    101.66560177910,
+                    2.93906927916
                 ]
             }
         },
@@ -10326,6 +10376,43 @@
                 "coordinates": [
                     101.62107000000,
                     3.19851000000
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "type": "recommendation",
+                "comment": "Pedestrian and bicycle path with tunnel so that residents of Presint 11 can conveniently reach the MRT station.",
+                "sort": "3",
+                "part-of": "39"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.65657815848,
+                        2.95159363447
+                    ],
+                    [
+                        101.65769756164,
+                        2.95335668753
+                    ],
+                    [
+                        101.65873645663,
+                        2.95380912758
+                    ],
+                    [
+                        101.65969132304,
+                        2.95495558724
+                    ],
+                    [
+                        101.66044234157,
+                        2.95875925331
+                    ]
                 ]
             }
         },
@@ -12486,6 +12573,107 @@
                             101.69517800000,
                             3.17317500000
                         ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "type": "recommendation",
+                "comment": "Construct a pedestrian/cycling path next to the railway tracks to connect commuters living south of the MRT station.",
+                "sort": "3",
+                "part-of": "41"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.66127919078,
+                        2.90959988760
+                    ],
+                    [
+                        101.66137575030,
+                        2.90999634272
+                    ],
+                    [
+                        101.66192560315,
+                        2.91086961499
+                    ],
+                    [
+                        101.66203759544,
+                        2.91083545091
+                    ],
+                    [
+                        101.66209861569,
+                        2.91092920710
+                    ],
+                    [
+                        101.66203759544,
+                        2.91083545091
+                    ],
+                    [
+                        101.66192560315,
+                        2.91086961499
+                    ],
+                    [
+                        101.66443346858,
+                        2.91437876976
+                    ],
+                    [
+                        101.66714116797,
+                        2.91871697133
+                    ],
+                    [
+                        101.66725180976,
+                        2.91843436465
+                    ],
+                    [
+                        101.66714116797,
+                        2.91871697133
+                    ],
+                    [
+                        101.66755736198,
+                        2.91968425280
+                    ],
+                    [
+                        101.66764542326,
+                        2.91950585692
+                    ],
+                    [
+                        101.66758105025,
+                        2.91946433663
+                    ],
+                    [
+                        101.66764542326,
+                        2.91950585692
+                    ],
+                    [
+                        101.66755736198,
+                        2.91968425280
+                    ],
+                    [
+                        101.66875048935,
+                        2.92305249082
+                    ],
+                    [
+                        101.66918635234,
+                        2.92291319339
+                    ],
+                    [
+                        101.66875048935,
+                        2.92305249082
+                    ],
+                    [
+                        101.67043625772,
+                        2.92879029277
+                    ],
+                    [
+                        101.67110680997,
+                        2.93131898794
                     ]
                 ]
             }
@@ -15442,6 +15630,31 @@
                     [
                         101.72054394543,
                         3.15488043321
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "stroke-opacity": "1",
+                "stroke-width": "10",
+                "stroke": "#669c35",
+                "type": "recommendation",
+                "comment": "Give residents of Skypark the option to directly reach the MRT station on foot or by bicycle. Add a crossing with traffic lights.",
+                "sort": "3",
+                "part-of": "40"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        101.66359481726,
+                        2.94140400024
+                    ],
+                    [
+                        101.66463911857,
+                        2.94251347351
                     ]
                 ]
             }
