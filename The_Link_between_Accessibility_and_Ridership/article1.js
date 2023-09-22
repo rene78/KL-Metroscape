@@ -243,7 +243,7 @@ function generatePopupHtml(element) {
     popupHtml = `
       <h3 class="popup-heading">${stations[parseInt(element.feature.properties["part-of"])].name}</h3>
       <ul>
-        <li>This area can be reached on foot within ${(element.feature.properties.label).trim()} from the station</li>
+        <li>This area is within a ${(element.feature.properties.label).trim()} walk from the MRT station</li>
         <li>Population (estimated): ${element.feature.properties.total_pop}</li>
         <li>Surface area: ${element.feature.properties.area}</li>
       </ul>
