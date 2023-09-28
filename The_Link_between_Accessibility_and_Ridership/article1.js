@@ -226,7 +226,7 @@ function generatePopupHtml(element) {
     popupHtml = `
       <h3 class="popup-heading">${element.feature.properties.title}</h3>
       <div class="stars">
-        <div class="star activated"></div>
+        <div class="star ${element.feature.properties.stars > 0 ? "activated" : ""} "></div>
         <div class="star ${element.feature.properties.stars > 1 ? "activated" : ""} "></div>
         <div class="star ${element.feature.properties.stars > 2 ? "activated" : ""} "></div>
       </div>
