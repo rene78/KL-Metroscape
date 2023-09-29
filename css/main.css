@@ -15,6 +15,16 @@ body {
   background-color: var(--bg-color);
 }
 
+a {
+  color: inherit;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
 .gh-corner {
   position: absolute;
   right: 0;
