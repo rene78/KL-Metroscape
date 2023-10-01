@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
 :root {
-  --bg-color: #1F2739;
-  --main-color: #cbc8cf;
-  --secondary-color: #66adac;
+  --primary-text-color: #212529;
+  --secondary-text-color: #cbc8cf;
+  --tertiary-text-color: #66adac;
+}
+
+html {
+  font-size: 18px;
 }
 
 body {
@@ -11,8 +15,7 @@ body {
   font-family: Mulish,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  color: var(--main-color);
-  background-color: var(--bg-color);
+  color: var(--primary-text-color);
 }
 
 a {
@@ -22,7 +25,7 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--tertiary-text-color);
 }
 
 .gh-corner {
@@ -53,13 +56,14 @@ a:hover {
 
 .text-container {
   background-color: rgba(0, 0, 0, 0.5);
+  color: var(--secondary-text-color);
   font-weight: 400;
   text-align: center;
   line-height: initial;
 }
 
 .heading {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 400;
   margin: 0;
 }
@@ -132,7 +136,7 @@ a:hover {
 .post {
   width: 20%;
   margin: 25px;
-  border: solid 1px var(--main-color);
+  border: solid 1px var(--primary-text-color);
   overflow: hidden;
   display: flex;
   flex-direction: column;

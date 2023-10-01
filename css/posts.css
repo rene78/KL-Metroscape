@@ -1,6 +1,6 @@
 .blog-post-container {
   margin: 40px auto;
-  max-width: 720px;
+  max-width: 1140px;
   padding: 0 20px;
 }
 
@@ -8,8 +8,8 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
-  color: var(--secondary-color);
-  font-weight: 800;
+  color: var(--tertiary-text-color);
+  /* font-weight: 800; */
 }
 
 .blog-post-heading {
@@ -18,6 +18,7 @@
 
 .blog-post-subheading {
   text-align: center;
+  font-style: italic;
   font-weight: 400;
   margin-bottom: 35px;
 }
@@ -99,7 +100,7 @@ footer ol {
 [aria-describedby="footnote-label"] {
   counter-increment: footnotes; /* 1 */
   text-decoration: none; /* 2 */
-  color: var(--main-color); /* 2 */
+  color: var(--primary-text-color); /* 2 */
   cursor: default; /* 2 */
   outline: none; /* 2 */
   font-weight: unset;
@@ -139,7 +140,7 @@ footer ol {
  * Highlight target note
  */
 footer :target {
-  background: var(--secondary-color);
+  background: var(--tertiary-text-color);
 }
 
 /**
