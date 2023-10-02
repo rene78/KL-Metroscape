@@ -152,3 +152,10 @@ footer :target {
   visibility: hidden;
   opacity: 0;
 } */
+
+/* Quote */
+.wp-block-quote {
+  border-left: 0.25em solid;
+  margin: 0 0 1.75em;
+  padding-left: 1em;
+}
