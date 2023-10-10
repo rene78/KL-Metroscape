@@ -174,7 +174,7 @@ footer :target {
 
 .paragraph-highlight {
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: rgb(102, 173, 172, 0.2);
   font-size: 1.3em;
 }
 
@@ -187,18 +187,22 @@ footer :target {
 
 figure {
   margin: 0;
+  border: 1px solid #c8ccd1;
 }
 
 figcaption {
   color: #555;
   font-size: 15px;
   text-align: center;
+  margin: 3px;
 }
 
 @media (min-width: 600px) {
   .figure-float-right {
     float: right;
-    margin-left: 5px;
+    clear: right;
+    margin-left: 30px;
+    margin-bottom: 5px;
     width: 300px;
   }
 }
@@ -211,4 +215,16 @@ figcaption {
   .figure-float-right {
     width: 500px;
   }
+
+  body {
+    line-height: 36px;
+  }
+
+  figcaption {
+    line-height: 1.5;
+  }
+}
+
+h2,h3 {
+  color: var(--tertiary-text-color);
 }
