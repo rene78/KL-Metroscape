@@ -1,4 +1,8 @@
-.blog-post-container {
+h2,h3 {
+  color: var(--tertiary-text-color);
+}
+
+article {
   margin: 40px auto;
   max-width: 1140px;
   padding: 0 20px;
@@ -22,11 +26,6 @@
   font-weight: 400;
   margin-bottom: 35px;
 }
-
-/* .full-width-image {
-  width: 100%;
-  height: 100%;
-} */
 
 #map {
   height: 50vh;
@@ -83,13 +82,10 @@ footer ol {
 /**
  * Initialiazing a `footnotes` counter on the wrapper
  */
-.blog-post-container {
+
+article {
   counter-reset: footnotes;
 }
-
-/* article {
-  counter-reset: footnotes;
-} */
 
 /**
  * Inline footnotes references
@@ -179,7 +175,7 @@ footer :target {
 }
 
 /* Pictures */
-.blog-post-container img {
+article img {
   /* width: 100%;
   height: 100%; */
   max-width: 100%;
@@ -225,6 +221,24 @@ figcaption {
   }
 }
 
-h2,h3 {
-  color: var(--tertiary-text-color);
+/* Table of content, taken from https://www.tipsandtricks-hq.com/simple-table-of-contents-toc-using-pure-html-and-css-code-9217*/
+#toc-container {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #aaa;
+  padding: 20px;
+}
+
+.toc-title {
+  margin-top: 0;
+  font-weight: bold;
+  /* text-align: center; */
+}
+
+.toc-list {
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+#toc-container ul {
+  list-style: none;
 }

@@ -84,14 +84,36 @@
       <p class="subheading">Some thoughts on urban planning in KL</p>
     </div>
   </a>
-  <div class="blog-post-container">
+  <article class="blog-post-container">
     <h3 class="date">Last updated: March 1, 2023</h3>
     <h1 class="blog-post-heading">The Surprising Disconnect: Why Malaysians Shy Away from their RM120 Billion MRT System
     </h1>
     <p class="blog-post-subheading">Exploring factors behind low MRT passenger numbers in Kuala Lumpur and strategies
       for growth.</p>
-    <img class="full-width-image" src="./data/Interior_of_Putrajaya_Line_Train.jpg"
+    <img src="./data/Interior_of_Putrajaya_Line_Train.jpg"
       alt="The empty interior of a Putrajaya Line train">
+
+    <div id="toc-container">
+      <p class="toc-title">Contents</p>
+      <ul class="toc-list">
+        <li><a href="#First_Point_Header">1 First Point Header</a>
+          <ul>
+            <li><a href="#First_Sub_Point_1">1.1 First Sub Point 1</a></li>
+            <ul>
+              <li><a href="#First_Sub_Point_1">1.1.1 First Sub Sub Point 1</a></li>
+            </ul>
+            <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#private-neighborhoods-as-obstacles">2 Private neighborhoods</a></li>
+        <li><a href="#Third_Point_Header">3 Third Point Header</a></li>
+      </ul>
+    </div>
+
+    <!-- <div class="toc">
+        <h2>Table of Contents</h2>
+        <a href="#private-neighborhoods-as-obstacles">Private neighborhoods</a>
+      </div> -->
     <h2>Abstract</h2>
     <p>This article aims to investigate the factors contributing to the underwhelming ridership of Kuala Lumpur's Mass
       Rapid Transport (MRT) system. The primary issues identified include insufficient first/last-mile connectivity and
@@ -167,7 +189,7 @@
     <h3>Unfavourable Station Locations</h3>
     <figure>
       <a href="./data/Sungai_Buloh_MRT_Station_full_res.jpg" target="_blank" rel="noopener noreferrer">
-        <img class="full-width-image" src="./data/Sungai_Buloh_MRT_Station_low_res.jpg"
+        <img src="./data/Sungai_Buloh_MRT_Station_low_res.jpg"
           alt="Sungai Buloh MRT station is very hard to reach without a motor vehicle">
       </a>
       <figcaption>Prepare for an unforgettable adventure if you intend to reach Sungai Buloh station without using a
@@ -215,7 +237,7 @@
       (MRT) system, find themselves isolated by seemingly insurmountable highways, creating a stark physical and
       psychological divide between residents and the public transportation network.
     </p>
-    <h3>Private Neighborhoods as Obstacles</h3>
+    <h3 id="private-neighborhoods-as-obstacles">Private Neighborhoods as Obstacles</h3>
     <figure class="figure-float-right">
       <a href="./data/Gated_Communities_Prevent_Passage_full_res.png" target="_blank" rel="noopener noreferrer">
         <img src="./data/Gated_Communities_Prevent_Passage_low_res.jpg"
@@ -249,18 +271,20 @@
     <p><span style="color: red;">Commuters who need to use the car to reach the MRT
         stations overflowing "Park and Ride" lots will rather drive all the way to their destination. Screenshot of p&r
         parking lot in my video.</span></p>
+    <p><span style="color: red;">Feeder buses in its current form are too few, unreliable, get stuck in traffic and have
+        a low frequency without schedule. <a href="https://x.com/NabilErsyad/status/1670093589609840642?s=20">See Twitter
+          post from nabil</a> </span></p>
     <p><span style="color: red;">stuff below is not really related to accessiblity issues, but it is still problematic.
         think about how to implement it into the article. maybe with another highlight like this?</span></p>
-        <p class="paragraph-highlight" style="color: red;">Problems with reliability and maintenance</p>
+    <p class="paragraph-highlight" style="color: red;">Problems with reliability and maintenance</p>
     <h3>Problems with reliability and maintenance</h3>
     <p><span style="color: red;">Reliability issues. Sometimes major problems, e.g. LRT line out of service for 1 year;
         Reduced amount of coaches lead to long waiting times in between departures, etc. (Twitter post about LRT
-        breakdown? or this one from nabil https://x.com/NabilErsyad/status/1679830914602512384?s=20). Feeder buses in
-        its current form are unreliable, get stuck in traffic and have a low frequency without schedule.
-        https://x.com/NabilErsyad/status/1670093589609840642?s=20</span></p>
-    <p><span style="color: red;">once the station is reached it can take a long time to walk all the way to the platform
-        (https://x.com/NabilErsyad/status/1670093593636372481?s=20)</span></p>
-    <p><span style="color: red;">not enough feeder busses. and they get stuck in traffic.</span></p>
+        breakdown? or <a href="https://x.com/NabilErsyad/status/1679830914602512384?s=20)">this one from nabil</a> .
+      </span></p>
+    <p><span style="color: red;">once the station is reached it can take a long time to <a
+          href="https://x.com/NabilErsyad/status/1670093593636372481?s=20">walk all the way to the platform</a> </span>
+    </p>
 
     <h2>General recommendations</h2>
     <p>This geographical separation not only compounds the difficulties faced by commuters but also underscores the
@@ -302,7 +326,7 @@
             href="#tom-tom-trafic-index-ref" aria-label="Back to content"> ↩</a></li>
       </ol>
     </footer>
-  </div>
+  </article>
 </body>
 
 </html>
