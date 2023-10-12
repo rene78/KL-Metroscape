@@ -1,4 +1,8 @@
-h2,h3 {
+h1 {
+  font-size: 2em;
+}
+
+h1,h2,h3 {
   color: var(--tertiary-text-color);
 }
 
@@ -166,12 +170,6 @@ footer :target {
   margin: 0 0 1.75em;
   padding-left: 1em;
   background-color: #f6f6f6;
-}
-
-.paragraph-highlight {
-  text-align: center;
-  background-color: rgb(102, 173, 172, 0.2);
-  font-size: 1.3em;
 }
 
 /* Pictures */
