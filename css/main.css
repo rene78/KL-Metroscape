@@ -99,12 +99,21 @@ a:hover {
   font-size: 20px;
 }
 
-.email-symbol {
-  margin: 7px 0 0 0;
-  width: 25px;
+.social-media-links {
+  display: flex;
+  align-items: center;
 }
 
-.email-symbol:hover {
+.link-symbols {
+  margin: 7px;
+  width: 30px;
+}
+
+.twitter {
+  width: 21px;
+}
+
+.link-symbols:hover {
   color: gray;
   cursor: pointer;
 }
@@ -118,9 +127,9 @@ a:hover {
     text-align: center;
   }
 
-  .email-symbol {
+  /* .link-symbols {
     margin: 7px auto;
-  }
+  } */
 }
 
 .posts-container {
