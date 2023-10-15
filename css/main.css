@@ -58,20 +58,12 @@ header picture {
   display: contents;
 }
 
-/* .text-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--secondary-text-color);
-  font-weight: 400;
-  text-align: center;
-  line-height: initial;
-} */
-
 .kl-metroscape-logo {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  padding: 10px 30px;
   width: 85%;
   max-width: 500px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 @media (max-width: 510px) {
@@ -80,18 +72,6 @@ header picture {
     max-height: 160px;
   }
 }
-
-/* .heading {
-  font-size: 46px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.subheading {
-  font-weight: 100;
-  font-size: 18px;
-  margin: 0;
-} */
 
 .rene-profile {
   display: flex;
@@ -145,10 +125,6 @@ header picture {
   .about-me-heading {
     text-align: center;
   }
-
-  /* .link-symbols {
-    margin: 7px auto;
-  } */
 }
 
 .posts-container {
