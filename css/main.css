@@ -12,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Mulish,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+  font-family: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.5;
   color: var(--primary-text-color);
@@ -35,7 +35,7 @@ a:hover {
 }
 
 /* Don't show GitHub corner on small screens due to overlap with heading */
-@media (max-width: 600px) {
+@media (max-width: 680px) {
   .gh-corner {
     display: none;
   }
@@ -54,15 +54,34 @@ a:hover {
   align-items: center;
 }
 
-.text-container {
+header picture {
+  display: contents;
+}
+
+/* .text-container {
   background-color: rgba(0, 0, 0, 0.5);
   color: var(--secondary-text-color);
   font-weight: 400;
   text-align: center;
   line-height: initial;
+} */
+
+.kl-metroscape-logo {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 85%;
+  max-width: 500px;
+  border-radius: 10px;
 }
 
-.heading {
+@media (max-width: 510px) {
+  .kl-metroscape-logo {
+    width: auto;
+    max-height: 160px;
+  }
+}
+
+/* .heading {
   font-size: 46px;
   font-weight: 400;
   margin: 0;
@@ -72,7 +91,7 @@ a:hover {
   font-weight: 100;
   font-size: 18px;
   margin: 0;
-}
+} */
 
 .rene-profile {
   display: flex;
