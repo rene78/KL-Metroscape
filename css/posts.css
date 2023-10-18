@@ -201,14 +201,14 @@ figcaption {
   }
 }
 @media (min-width: 800px) {
-  .figure-float-right {
+  /* .figure-float-right {
     width: 400px;
-  }
+  } */
 }
 @media (min-width: 1020px) {
-  .figure-float-right {
+  /* .figure-float-right {
     width: 500px;
-  }
+  } */
 
   body {
     line-height: 36px;
