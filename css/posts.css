@@ -2,7 +2,9 @@ h1 {
   font-size: 2em;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   color: var(--tertiary-text-color);
 }
 
@@ -72,7 +74,7 @@ article {
   margin: 10px auto;
 }
 
-/* Footnotes */
+/* Footnotes https://codepen.io/SitePoint/pen/QbMgvY */
 footer {
   margin-top: 50px;
   border-top: 1px solid silver;
@@ -157,12 +159,12 @@ footer :target {
 /**
  * Visually hidden yet accessible content
  */
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   visibility: hidden;
   opacity: 0;
-} */
+}
 
 /* Quote */
 .wp-block-quote {
@@ -200,11 +202,13 @@ figcaption {
     width: 300px;
   }
 }
+
 @media (min-width: 800px) {
   /* .figure-float-right {
     width: 400px;
   } */
 }
+
 @media (min-width: 1020px) {
   /* .figure-float-right {
     width: 500px;
@@ -239,4 +243,52 @@ figcaption {
 
 #toc-container ul {
   list-style: none;
+}
+
+/* counter */
+
+body {
+  counter-reset: heading1;
+  /*initiate heading1 counter with value 0*/
+}
+
+h1 {
+  counter-reset: heading2;
+  /*initiate heading2 counter with value 0*/
+}
+
+h2 {
+  counter-reset: heading3;
+  /*initiate heading3 counter with value 0*/
+}
+
+/* Exclude the main heading from the counter */
+article>h1:first-of-type::before {
+  counter-increment: none;
+  content: "";
+}
+
+/* Whenever you encounter an h1 increment the heading1 counter and add the current counter number and a space, e.g. "3 " */
+h1::before {
+  counter-increment: heading1;
+  content: counter(heading1) " ";
+}
+
+/* Whenever you encounter an h2 increment the heading2 counter and add the current counter numbers and a dot/space, e.g. "3.2 " */
+h2::before {
+  counter-increment: heading2;
+  content: counter(heading1) "." counter(heading2) " ";
+}
+
+/* Whenever you encounter an h3 increment the heading3 counter and add the current counter numbers and dots/space, e.g. "3.2.1 " */
+h3::before {
+  counter-increment: heading3;
+  content: counter(heading1) "." counter(heading2) "." counter(heading3) " ";
+}
+
+/* Reduce indentation of TOC list on small screens */
+@media (max-width: 600px) {
+  .toc-list ul {
+    padding-left: 15px;
+  }
 }
