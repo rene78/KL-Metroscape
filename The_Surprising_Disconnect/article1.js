@@ -110,7 +110,7 @@ function addLeafletMap() {
     contextmenuWidth: 150,
     contextmenuItems: [{
       text: 'Open with GMaps',
-      icon: 'data/gmaps-logo.png',
+      icon: 'img/gmaps-logo.png',
       callback: openGmaps
     }]
   });
@@ -125,7 +125,7 @@ function addLeafletMap() {
 //Show GeoJSON features on the Leaflet map & add functions to determine what happens on mouseover
 function showGeoJson(inputGeoJson) {
   const trainIcon = L.icon({
-    iconUrl: './data/metro.png',
+    iconUrl: './img/metro.png',
     iconSize: [20, 50], // size of the icon
   });
 

@@ -1,3 +1,4 @@
+/* #region CSS RELATED TO GENERAL ARTICLE LAYOUT */
 h1 {
   font-size: 2em;
 }
@@ -33,6 +34,17 @@ article {
   margin-bottom: 35px;
 }
 
+/* Quote */
+.wp-block-quote {
+  border-left: 0.25em solid;
+  margin: 0 0 1.75em;
+  padding-left: 1em;
+  background-color: #f6f6f6;
+}
+
+/* #endregion */
+
+/* #region CSS RELATED TO LEAFLET MAP */
 #map {
   height: 50vh;
   width: 100%;
@@ -73,6 +85,10 @@ article {
   display: block;
   margin: 10px auto;
 }
+
+/* #endregion */
+
+/* #region CSS RELATED TO FOOTNOTES */
 
 /* Footnotes https://codepen.io/SitePoint/pen/QbMgvY */
 footer {
@@ -166,13 +182,9 @@ footer :target {
   opacity: 0;
 }
 
-/* Quote */
-.wp-block-quote {
-  border-left: 0.25em solid;
-  margin: 0 0 1.75em;
-  padding-left: 1em;
-  background-color: #f6f6f6;
-}
+/* #endregion */
+
+/* #region CSS RELATED TO PICTURES */
 
 /* Pictures */
 article img {
@@ -223,6 +235,9 @@ figcaption {
   }
 }
 
+/* #endregion */
+
+/* #region CSS RELATED TO TABLE OF CONTENTS */
 /* Table of content, taken from https://www.tipsandtricks-hq.com/simple-table-of-contents-toc-using-pure-html-and-css-code-9217*/
 #toc-container {
   background: #f9f9f9 none repeat scroll 0 0;
@@ -245,8 +260,16 @@ figcaption {
   list-style: none;
 }
 
-/* counter */
+/* Reduce indentation of TOC list on small screens */
+@media (max-width: 600px) {
+  .toc-list ul {
+    padding-left: 15px;
+  }
+}
 
+/* #endregion */
+
+/* #region CSS RELATED TO HEADING NUMBERING */
 body {
   counter-reset: heading1;
   /*initiate heading1 counter with value 0*/
@@ -286,9 +309,4 @@ h3::before {
   content: counter(heading1) "." counter(heading2) "." counter(heading3) " ";
 }
 
-/* Reduce indentation of TOC list on small screens */
-@media (max-width: 600px) {
-  .toc-list ul {
-    padding-left: 15px;
-  }
-}
+/* #endregion */
