@@ -224,7 +224,7 @@ function generatePopupHtml(element) {
   //Type "station"
   if (type === "station") {
     popupHtml = `
-      <h3 class="popup-heading">${element.feature.properties.title}</h3>
+      <div class="popup-heading">${element.feature.properties.title}</div>
       <div class="stars">
         <div class="star ${element.feature.properties.stars > 0 ? "activated" : ""} "></div>
         <div class="star ${element.feature.properties.stars > 1 ? "activated" : ""} "></div>
@@ -235,13 +235,13 @@ function generatePopupHtml(element) {
   }
   else if (type === "recommendation") {
     popupHtml = `
-      <h3 class="popup-heading">${stations[parseInt(element.feature.properties["part-of"])].name}</h3>
+      <div class="popup-heading">${stations[parseInt(element.feature.properties["part-of"])].name}</div>
       <div>${element.feature.properties.comment}</div>
       `;
   }
   else if (type === "reachPolygons") {
     popupHtml = `
-      <h3 class="popup-heading">${stations[parseInt(element.feature.properties["part-of"])].name}</h3>
+      <div class="popup-heading">${stations[parseInt(element.feature.properties["part-of"])].name}</div>
       <ul>
         <li>This area is within a ${(element.feature.properties.label).trim()} walk from the MRT station</li>
         <li>Population (estimated): ${element.feature.properties.total_pop}</li>
@@ -251,7 +251,7 @@ function generatePopupHtml(element) {
   }
   else if (type === "mrtline") {
     popupHtml = `
-        <h3 class="popup-heading">MRT Putrajaya Line</h3>
+        <div class="popup-heading">MRT Putrajaya Line</div>
       `;
   }
 

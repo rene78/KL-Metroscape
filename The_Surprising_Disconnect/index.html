@@ -53,6 +53,16 @@
     <!-- Style related -->
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/posts.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3NN22FX81"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-X3NN22FX81');
+    </script>
   </head>
 </head>
 
@@ -424,7 +434,9 @@
         aria-describedby="footnote-label"
         id="roadcc-centre-of-paris-to-become-a-huge-low-traffic-neighbourhood-ref"></a></p>
     <p><b>Learn from Success:</b> Examine and draw inspiration from cities that have successfully implemented a modern
-      multi-modal urban transport system, e.g. Copenhagen, Singapore or Amsterdam.</p>
+      multi-modal urban transport system, e.g. Copenhagen, Singapore or Seoul. Amsterdam open-sourced their guidebook on
+      how to build livable and accessible cities, called the Red Book (Handboek Rood), so there is no need to reinvent
+      the wheel.</p>
 
     <h1 id="assessment-and-targeted-recommendations-for-the-putrajaya-line">Assessment and Targeted Recommendations for
       the Putrajaya Line</h1>
@@ -438,9 +450,25 @@
     </figure>
     <p>The challenges we discussed earlier are prominently evident when examining the Putrajaya Line. The map below
       assesses the accessibility of each station and offers specific recommendations for enhancements.</p>
+    <p>
+    <p>Upon selecting any station, which can be done by either clicking on the station symbol on the map or by making a
+      choice from the top-down menu located at the top of the map, three types of information will become visible:
+    <ol>
+      <li>A summary pop-up offering a general assessment and a star rating for the station.</li>
+      <li>Three distinct polygons in various colors, known as the Reach Analysis, will become visible. The green polygon
+        represents the area accessible within a 5-minute walk from the station, while the yellow polygon indicates a
+        10-minute walking distance, and the red polygon signifies a 15-minute walk. The station is considered easily
+        accessible if these polygons are as extensive and circular as possible.</li>
+      <li>Green-colored lines are displayed, which represent recommended additional pathways to enhance the station's
+        accessibility.</li>
+    </ol>
+    </p>
+    <div id="map">
+      <select name="stations" id="stations" aria-label="Stations"></select>
+    </div>
     <p>What became clear during the map's creation is that even relatively small investments in pedestrian
-      infrastructure can significantly boost ridership. By allocating funds similar to those used for a short highway
-      section, the city could connect tens of thousands of Kuala Lumpur residents to the MRT Line. To illustrate,
+      infrastructure can significantly boost ridership. <b>By allocating funds similar to those used for a short highway
+        section, the city could connect tens of thousands of Kuala Lumpur residents to the MRT Line.</b> To illustrate,
       consider the case of the Sri Delima (PY12) station in the city's northern region:</p>
     <figure class="figure-float-right">
       <a href="./img/sri_delima_detour_high_res.webp" target="_blank" rel="noopener noreferrer">
@@ -455,14 +483,12 @@
     </figure>
     <p>For any public transit station, it is paramount that commuters can move in any direction without encountering
       obstacles such as impassable roads, neighborhoods, rivers or lakes. Well-designed stations, therefore, feature
-      expansive, circular access areas in the Reach Analysis. Conversely, the Reach Analysis for Sri Delima clearly
+      expansive, circular polygons in the Reach Analysis. Conversely, the Reach Analysis for Sri Delima clearly
       highlights that Taman Wahyu, the neighborhood northeast of the station, is only accessible via a lengthy detour
-      along a busy road devoid of sidewalks. This problem could easily be solved by building a simple footbridge over
-      the lake. This minor addition would enable residents of Lakecity, Lakeville, Eco Sky, and other condominiums, with
-      an estimated collective occupancy of at least 10,000 people, to access the station safely.</p>
-    <div id="map">
-      <select name="stations" id="stations" aria-label="Stations"></select>
-    </div>
+      along a busy road devoid of sidewalks. From my own experience, I can say that no one is willing to expose
+      themselves to this danger. This problem could easily be solved by building a simple footbridge over the lake. This
+      minor addition would enable residents of Lakecity, Lakeville, Eco Sky, and other condominiums, with an estimated
+      collective occupancy of at least 10,000 people, to access the station safely.</p>
     <footer>
       <h1 class="visually-hidden" id="footnote-label">References</h1>
       <ol>
