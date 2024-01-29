@@ -1,8 +1,15 @@
 /*
 Purpose of this helper script:
-- Sort GeoJSON elements, so that a recommendation feature is always above a reach polygon in order for it to remain clickable
+Sort GeoJSON elements, so that
+- a recommendation feature is always above the reach polygons in order for it to remain clickable
+- smaller reach polygons are above larger ones so they remain clickable as well
+
+Background:
+GeoJSON features that are added later in the file are always on top of elements that are added earlier.
+By sorting those features we can define what can still be selected.
 
 Usage
+- Copy your unsorted GeoJSON file to putrajayaLineRecommendationsTemp.geojson
 - Just open sortGeoJSON.html and copy newly sorted GeoJSON. Paste it to putrajayaLineRecommendations.geojson
 */
 

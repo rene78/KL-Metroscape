@@ -15888,6 +15888,31 @@
     {
       "type": "Feature",
       "properties": {
+        "comment": "Extend bridge all the way to the station so commuters don't have to walk down and up again.",
+        "stroke-opacity": "1",
+        "part-of": "13",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            101.67506101637365,
+            3.2057238481153725
+          ],
+          [
+            101.6752268151631,
+            3.2058610637899876
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "stroke-opacity": "1",
         "stroke-width": "10",
         "stroke": "#669c35",
