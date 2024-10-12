@@ -4,6 +4,10 @@
   --primary-text-color: #212529;
   --secondary-text-color: #cbc8cf;
   --tertiary-text-color: #2E6161;
+
+  --background-color-dark-mode: #1e1e1e;
+  --primary-text-color-dark-mode: #cbc8cf;
+  --tertiary-text-color-dark-mode: #67ADAC;
 }
 
 html {
@@ -197,7 +201,7 @@ header picture {
 .post-heading {
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-top: solid 1px #eaeae6;
+  /* border-top: solid 1px #eaeae6; */
   padding: 30px;
   font-size: 14px;
   line-height: 22px;
@@ -206,4 +210,41 @@ header picture {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.dark-mode {
+  background-color: var(--background-color-dark-mode);
+  color: var(--primary-text-color-dark-mode);
+
+  h1,
+  h2,
+  h3 {
+    color: var(--tertiary-text-color-dark-mode);
+  }
+
+  a:hover {
+    color: var(--tertiary-text-color-dark-mode);
+  }
+
+  #toc-container {
+    background-color: #161616;
+    border-color: var(--primary-text-color);
+  }
+
+  figcaption {
+    color: var(--primary-text-color-dark-mode);
+  }
+
+  [aria-describedby="footnote-label"] {
+    color: var(--primary-text-color-dark-mode);
+  }
+
+  .wp-block-quote {
+    border-left: 0.25em solid;
+    background-color: #161616;
+  }
+
+  .post {
+    border-color: var(--primary-text-color-dark-mode);
+  }
 }

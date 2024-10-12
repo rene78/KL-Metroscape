@@ -19,7 +19,7 @@ article {
   font-size: 16px;
   /* line-height: 16px; */
   text-align: center;
-  color: var(--primary-text-color);
+  /* color: var(--primary-text-color); */
   /* font-weight: 800; */
 }
 
@@ -202,7 +202,7 @@ figure {
 }
 
 figcaption {
-  color: #555;
+  color: var(--primary-text-color);
   font-size: 15px;
   text-align: center;
   margin: 3px;
@@ -243,7 +243,7 @@ figcaption {
 /* #region CSS RELATED TO TABLE OF CONTENTS */
 /* Table of content, taken from https://www.tipsandtricks-hq.com/simple-table-of-contents-toc-using-pure-html-and-css-code-9217*/
 #toc-container {
-  background: #f9f9f9 none repeat scroll 0 0;
+  background-color: #f9f9f9;
   border: 1px solid #aaa;
   padding: 20px;
 }
