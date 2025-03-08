@@ -13644,6 +13644,31 @@
       "type": "Feature",
       "properties": {
         "stroke-opacity": "1",
+        "comment": "Jalan Saint Thomas urgently needs a pedestrian crossing. The current fencing forces people to take a long detour.",
+        "stroke-width": "10",
+        "stroke": "#669c35",
+        "part-of": "15",
+        "type": "recommendation",
+        "sort": 3
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            101.68178372394743,
+            3.188603528488443
+          ],
+          [
+            101.68188160679335,
+            3.1883850702461842
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke-opacity": "1",
         "comment": "Connecting road to MRT station needed.",
         "part-of": "38",
         "stroke-width": "10",
