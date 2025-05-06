@@ -15,6 +15,10 @@ article {
   padding: 0 20px;
 }
 
+summary {
+  cursor: pointer;
+}
+
 .date {
   font-size: 16px;
   /* line-height: 16px; */
